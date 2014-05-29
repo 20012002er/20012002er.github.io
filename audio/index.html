@@ -1,0 +1,120 @@
+<html>
+<head>
+	<title>播放器</title>
+</head>
+<body>
+	<div style="margin: 100px auto;width: 300px;">
+		<canvas id="canvas"></canvas>
+		<br/>
+		<audio id="player" autobuffer autoloop loop controls autoplay></audio>
+		<input id="fileurl" type="file" onchange="play()" />
+	</div>
+	<script>
+	window.AudioContext = window.AudioContext || window.webkitAudioContext;
+
+
+	window.onload = function() {
+		var player = document.getElementById('player'),
+			audioContext = new AudioContext(),
+			playerAnalyser = audioContext.createAnalyser(),
+			playerSource = audioContext.createMediaElementSource(player),
+			timer;
+			
+		var canvas = document.getElementById('canvas'),
+			context = canvas.getContext('2d'),
+			CANVAS_WIDTH = canvas.clientWidth,
+			CANVAS_HEIGHT = canvas.clientHeight;
+			
+		playerSource.connect(playerAnalyser);
+		playerAnalyser.connect(audioContext.destination);
+			
+			
+		timer = setInterval(process, 1);
+		
+		
+		function process () {
+			playerFrequencyData = new Uint8Array(playerAnalyser.frequencyBinCount);
+			playerAnalyser.getByteFrequencyData(playerFrequencyData);
+			
+			playerTimeDomainData = new Uint8Array(playerAnalyser.fftSize);
+			playerAnalyser.getByteTimeDomainData(playerTimeDomainData);
+			
+			var volumn = Array.max(playerTimeDomainData).value - Array.min(playerTimeDomainData).value,
+					volumnStep = 0.2;
+			
+			this.volumnCurrent = this.volumnCurrent || 0;
+			if (this.volumnCurrent < volumn) {
+				this.volumnCurrent += volumnStep;
+			} else {
+				this.volumnCurrent -= volumnStep;
+			}
+			var h = (1 - this.volumnCurrent / 256) * 360,
+					s = (volumn / 256) * 30 + 30 * this.volumnCurrent / 256 ,
+					l =  (volumn / 256) * 30 + 20;
+			
+			document.body.style.backgroundColor = 'hsl(' + h + ',' + s + '%, ' +  l + '%)';
+			plot(playerFrequencyData);
+		}
+		
+		function plot (array) {
+			var min = Array.min(array),
+				max = Array.max(array);
+			context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+			context.beginPath();
+			for (var i = 0; i < array.length; i++) {
+				var x = CANVAS_WIDTH * i / (array.length - 1),
+						y = CANVAS_HEIGHT * (1 - (array[i] - min.value) / (max.value - min.value));
+				if (i == 0) {
+					context.moveTo(x, y);
+				} else {
+					context.lineTo(x, y);
+				}
+			}
+			context.lineTo(0, CANVAS_HEIGHT);
+			context.closePath();
+			context.stroke();
+		}
+
+	};
+
+	Array.max = function (array) {
+		var value = array[0],
+			index = 0;
+		for (var i = 1; i < array.length; i++) {
+			if (array[i] > value) {
+				value = array[i];
+				index = i;
+			}
+		}
+		return {value : value, index : index};
+	};
+
+	Array.min = function (array) {
+		var value = array[0],
+			index = 0;
+		for (var i = 1; i < array.length; i++) {
+			if (array[i] < value) {
+				value = array[i];
+				index = i;
+			}
+		}
+		return {value : value, index : index};
+	};
+
+	function play() {
+		try {
+			var file = document.getElementById('fileurl').files[0];
+			var reader = new FileReader();
+			reader.onload = (function(file) {
+				return function(e) {
+					player.src = e.target.result;
+				}
+			})(file);
+			reader.readAsDataURL(file);
+		} catch(e) {
+			alert('you must change your browser to play this!');
+		}
+	}
+	</script>
+</body>
+</html>
