@@ -1,88 +1,1082 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta charset=utf-8 />
-<title>网站建设中</title>
-<style type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>严东的简历</title>
+<style>
+html {
+  height: 100%
+}
+
 body {
-  background-color: #ECECEC;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  color: #3c3c3c;
+  height: 100%
 }
 
-.demo p:first-child {
-  text-align: center;
-  font-family: cursive;
-  font-size: 150px;
-  font-weight: bold;
-  line-height: 100px;
-  letter-spacing: 5px;
-  color: #fff;
+#body {
+  margin: 0px 0px -37px;
+  height: auto !important;
+  min-height: 100%
 }
 
-.demo p:first-child span {
+body {
+  font: 14px/22px "微软雅黑", "宋体", Arail;
+  margin: 0px;
+  padding: 0px;
+  color: rgb(51, 51, 51);
+  font-size-adjust: none;
+  font-stretch: normal
+}
+
+.clearfix::after {
+  height: 0px;
+  clear: both;
+  visibility: hidden;
+  content: ""
+}
+
+.clearfix {
+  display: inline-block
+}
+
+input[type='text'] {
+  font: 20px/32px "微软雅黑", "宋体", Arail;
+  padding: 6px 10px;
+  border: 2px solid rgb(241, 241, 241);
+  width: 600px;
+  height: 30px;
+  margin-top: 20px;
+  font-size-adjust: none;
+  font-stretch: normal
+}
+
+input[type='password'] {
+  font: 20px/32px "微软雅黑", "宋体", Arail;
+  padding: 6px 10px;
+  border: 2px solid rgb(241, 241, 241);
+  width: 600px;
+  height: 30px;
+  margin-top: 20px;
+  font-size-adjust: none;
+  font-stretch: normal
+}
+
+input[type='button'] {
+  font-family: "微软雅黑", "宋体", Arail
+}
+
+input[type='submit'] {
+  font-family: "微软雅黑", "宋体", Arail
+}
+
+input[type='text']:focus {
+  border: 2px solid rgb(212, 226, 228)
+}
+
+input[type='password']:focus {
+  border: 2px solid rgb(212, 226, 228)
+}
+
+input[type='submit'] {
+  border: currentColor;
+  cursor: pointer
+}
+
+input[type='button'] {
+  border: currentColor;
+  cursor: pointer
+}
+
+textarea {
+  font: 20px/32px "微软雅黑", "宋体", Arail;
+  padding: 6px 10px;
+  border: 2px solid rgb(241, 241, 241);
+  width: 600px;
+  height: 260px;
+  margin-top: 20px;
+  font-size-adjust: none;
+  font-stretch: normal;
+  resize: none
+}
+
+textarea:focus {
+  border: 2px solid rgb(212, 226, 228)
+}
+
+.placeholder {
+  color: rgb(119, 119, 119)
+}
+
+img {
+  border: currentColor
+}
+
+.dn {
+  display: none
+}
+
+.db {
+  display: block
+}
+
+.fl {
+  float: left !important
+}
+
+.fr {
+  float: right !important
+}
+
+.clear {
+  clear: both
+}
+
+a {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+  cursor: pointer
+}
+
+a:hover {
+  color: rgb(1, 152, 117)
+}
+
+dl {
+  margin: 0px
+}
+
+dd {
+  margin: 0px
+}
+
+em {
+  font-style: normal
+}
+
+ul.reset {
+  list-style: none;
+  margin: 0px;
+  padding: 0px
+}
+
+h2 {
+  margin: 10px 0px;
+  font-size: 16px
+}
+
+.c9 {
+  color: rgb(153, 153, 153)
+}
+
+.c7 {
+  color: rgb(119, 119, 119)
+}
+
+.c5 {
+  color: rgb(85, 85, 85)
+}
+
+.c3 {
+  color: rgb(51, 51, 51)
+}
+
+.f18 {
+  font-size: 18px
+}
+
+.f16 {
+  font-size: 16px
+}
+
+.mb10 {
+  margin-bottom: 10px
+}
+
+.mb20 {
+  margin-bottom: 20px
+}
+
+.mb0 {
+  margin-bottom: 0px !important
+}
+
+.mb50 {
+  margin-bottom: 50px
+}
+
+.mt20 {
+  margin-top: 20px
+}
+
+.profile_box {
+  background: rgb(250, 250, 250);
+  padding: 20px;
+  clear: both;
+  margin-bottom: 20px;
+  position: relative
+}
+
+.profile_box td {
+  vertical-align: top
+}
+
+.profile_box span.error {
+  margin: 3px 0px 0px
+}
+
+.profile_box h2 {
+  background: url("http://www.lagou.com:80/images/profile_square.png") no-repeat 0px
+    3px;
+  margin: 0px 0px 10px;
+  padding-left: 20px;
+  font-size: 18px;
+  font-weight: 600
+}
+
+.profile_box h2 span {
+  color: rgb(119, 119, 119)
+}
+
+.profile_box .c_add {
+  top: 7px;
+  right: 7px
+}
+
+.profile_box .pAdd {
+  background: url("../images/profile_add.png") no-repeat 20px 0px;
+  padding: 0px 0px 0px 140px;
   cursor: pointer;
-  text-shadow: 0px 0px 2px #686868,
-    0px 1px 1px #ddd,
-    0px 2px 1px #d6d6d6,
-    0px 3px 1px #ccc,
-    0px 4px 1px #c5c5c5,
-    0px 5px 1px #c1c1c1,
-    0px 6px 1px #bbb,
-    0px 7px 1px #777,
-    0px 8px 3px rgba(100, 100, 100, 0.4),
-    0px 9px 5px rgba(100, 100, 100, 0.1),
-    0px 10px 7px rgba(100, 100, 100, 0.15),
-    0px 11px 9px rgba(100, 100, 100, 0.2),
-    0px 12px 11px rgba(100, 100, 100, 0.25),
-    0px 13px 15px rgba(100, 100, 100, 0.3);
-  -webkit-transition: all .1s linear;
-  transition: all .1s linear;
+  min-height: 76px
 }
 
-.demo p:first-child span:hover {
-  text-shadow: 0px 0px 2px #686868,
-    0px 1px 1px #fff,
-    0px 2px 1px #fff,
-    0px 3px 1px #fff,
-    0px 4px 1px #fff,
-    0px 5px 1px #fff,
-    0px 6px 1px #fff,
-    0px 7px 1px #777,
-    0px 8px 3px #fff,
-    0px 9px 5px #fff,
-    0px 10px 7px #fff,
-    0px 11px 9px #fff,
-    0px 12px 11px #fff,
-    0px 13px 15px #fff;
-  -webkit-transition: all .1s linear;
-  transition: all .1s linear;
+.profile_box .pAdd:hover {
+  background-position: 20px -76px
 }
 
-.demo p:not(:first-child) {
-  text-align: center;
-  color: #666;
-  font-family: cursive;
-  font-size: 20px;
-  text-shadow: 0 1px 0 #fff;
-  letter-spacing: 1px;
-  line-height: 2em;
-  margin-top: -50px;
+.profile_box .pAdd a {
+  color: rgb(13, 149, 114);
+  font-size: 16px;
+  text-decoration: underline;
+  margin-top: 5px;
+  display: block
+}
+
+.profile_box td {
+  padding: 8px 0px 8px 20px
+}
+
+#basicInfo .basicEdit {
+  padding: 0px 0px 0px 20px;
+  overflow: hidden
+}
+
+#basicInfo .basicShow {
+  padding: 0px 130px 0px 20px;
+  line-height: 28px;
+  font-size: 16px;
+  position: relative
+}
+
+#basicInfo .basicShow span.nofill {
+  color: rgb(228, 106, 74)
+}
+
+#basicInfo .basicShow .m_portrait {
+  top: -35px;
+  right: 0px;
+  position: absolute
+}
+
+#expectJob .expectShow {
+  padding: 0px 40px 0px 20px;
+  font-size: 18px;
+  position: relative
+}
+
+#expectJob .expectShow a.c_edit {
+  top: 0px;
+  right: 0px
+}
+
+#expectJob .expectEdit input {
+  font: 18px/32px "微软雅黑", "宋体", Arail;
+  margin: 0px;
+  font-size-adjust: none;
+  font-stretch: normal
+}
+
+#expectJob .expectEdit input:focus {
+  border: 2px solid rgb(200, 230, 222)
+}
+
+#expectJob .expectEdit input[type='text'] {
+  width: 263px
+}
+
+#workExperience .experienceShow {
+  font-size: 16px;
+}
+
+#educationalBackground .educationalShow {
+  font-size: 16px
+}
+
+#workExperience .experienceShow ul.wlist {
+  list-style: none;
+  margin: 0px;
+  padding: 0px 0px 0px 10px
+}
+
+#educationalBackground .educationalShow ul.elist {
+  list-style: none;
+  margin: 0px;
+  padding: 0px 0px 0px 10px
+}
+
+#workExperience .experienceShow .wlist li {
+  margin: 13px 10px;
+  width: 290px;
+  float: left;
+  position: relative
+}
+
+#educationalBackground .educationalShow .elist li {
+  margin: 13px 10px;
+  width: 290px;
+  float: left;
+  position: relative
+}
+
+#educationalBackground .educationalShow li div {
+  background: rgb(255, 255, 255);
+  padding: 0px 7px;
+  width: 276px;
+  overflow: hidden
+}
+
+#workExperience .experienceShow li img {
+  border: 2px solid rgb(241, 241, 241);
+  margin-right: 7px;
+  float: left
+}
+
+#workExperience .experienceShow li h3 {
+  margin: 5px 0px;
+  width: 220px;
+  font-size: 18px;
+  font-weight: 500;
+  float: left
+}
+
+#educationalBackground .educationalShow li h3 {
+  margin: 5px 0px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  float: left
+}
+
+#workExperience .experienceShow li h4 {
+  margin: 0px;
+  color: rgb(85, 85, 85);
+  font-size: 14px;
+  font-weight: normal;
+  float: left;
+  width: 220px;
+  word-wrap: break-all;
+}
+
+#educationalBackground .educationalShow li h4 {
+  margin: 0px;
+  color: rgb(85, 85, 85);
+  font-size: 14px;
+  font-weight: normal;
+  float: left
+}
+
+.sm_del {
+  background: url("http://www.lagou.com:80/images/profile_op.png") no-repeat right 0px;
+  top: 0px;
+  width: 19px;
+  height: 19px;
+  right: 0px;
+  position: absolute
+}
+
+.sm_del:hover {
+  background-position: right -19px
+}
+
+.sm_edit {
+  background: url("http://www.lagou.com:80/images/profile_op.png") no-repeat left 0px;
+  top: 0px;
+  width: 19px;
+  height: 19px;
+  right: 26px;
+  position: absolute
+}
+
+.sm_edit:hover {
+  background-position: left -19px
+}
+
+.experienceForm {
+  padding-top: 10px
+}
+
+.educationalForm {
+  padding-top: 10px
+}
+
+.experienceForm td {
+  padding: 0px 0px 17px !important
+}
+
+.educationalForm td {
+  padding: 0px 0px 17px !important
+}
+
+.workForm td {
+  padding: 0px 0px 17px !important
+}
+
+.experienceForm input {
+  margin: 0px
+}
+
+.educationalForm input {
+  margin: 0px
+}
+
+.experienceForm input:focus {
+  border: 2px solid rgb(200, 230, 222)
+}
+
+.educationalForm input:focus {
+  border: 2px solid rgb(200, 230, 222)
+}
+
+.experienceForm input[type='text'] {
+  width: 265px
+}
+
+.educationalForm input[type='text'] {
+  width: 265px
+}
+
+.educationalForm input[type='text'] {
+  margin-right: 7px
+}
+
+.experienceForm .redstar {
+  margin: 15px 0px 0px
+}
+
+.educationalForm .redstar {
+  margin: 15px 0px 0px
+}
+
+.experienceForm .profile_select_139 {
+  margin-right: 10px
+}
+
+.educationalForm .profile_select_139 {
+  margin-right: 10px
+}
+
+.borderBtm {
+  margin-bottom: 10px;
+  border-bottom-color: rgb(229, 229, 229);
+  border-bottom-width: 1px;
+  border-bottom-style: solid
+}
+
+.projectForm {
+  padding-top: 10px
+}
+
+.projectForm td {
+  padding: 0px 0px 17px !important
+}
+
+.projectForm input {
+  margin: 0px
+}
+
+.projectForm input:focus {
+  border: 2px solid rgb(200, 230, 222)
+}
+
+.projectForm input[type='text'] {
+  width: 265px
+}
+
+.projectForm .profile_select_139 {
+  margin-right: 7px
+}
+
+.workForm input[type='text'] {
+  margin: 0px;
+  width: 570px
+}
+
+.projectForm textarea {
+  margin: 0px;
+  width: 570px;
+  height: 100px
+}
+
+.descriptionForm textarea {
+  margin: 0px;
+  width: 570px;
+  height: 100px
+}
+
+.workForm textarea {
+  margin: 0px;
+  width: 570px;
+  height: 100px
+}
+
+.projectForm textarea:focus {
+  border: 2px solid rgb(200, 230, 222)
+}
+
+.descriptionForm textarea:focus {
+  border: 2px solid rgb(200, 230, 222)
+}
+
+.workForm textarea:focus {
+  border: 2px solid rgb(200, 230, 222)
+}
+
+.projectForm .word_count {
+  margin: -5px 22px -5px 0px;
+  float: right
+}
+
+.descriptionForm .word_count {
+  margin: -5px 22px -5px 0px;
+  float: right
+}
+
+#projectExperience .projectShow {
+  padding: 0px 20px
+}
+
+#worksShow .workShow {
+  padding: 0px 20px
+}
+
+#projectExperience .projectShow ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  width: 100%
+}
+
+#worksShow .workShow ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  width: 100%
+}
+
+#projectExperience .projectShow .plist>li {
+  padding: 10px 0px;
+  border-bottom-color: rgb(229, 229, 229);
+  border-bottom-width: 1px;
+  border-bottom-style: solid
+}
+
+#worksShow .workShow li {
+  padding: 10px 0px;
+  border-bottom-color: rgb(229, 229, 229);
+  border-bottom-width: 1px;
+  border-bottom-style: solid
+}
+
+#projectExperience .projectShow .plist>li.noborder {
+  border-bottom-color: currentColor;
+  border-bottom-width: medium;
+  border-bottom-style: none
+}
+
+#worksShow .workShow li.noborder {
+  border-bottom-color: currentColor;
+  border-bottom-width: medium;
+  border-bottom-style: none
+}
+
+#projectExperience .projectShow .plist>li .projectList {
+  position: relative
+}
+
+#worksShow .workShow li .workList {
+  position: relative
+}
+
+#projectExperience .projectList .f16 {
+  
+}
+
+#worksShow .workList .f16 {
+  
+}
+
+#projectExperience .projectShow dl {
+  width: 100%;
+  clear: both;
+  min-height: 22px
+}
+
+#projectExperience .projectShow dt {
+  position: absolute
+}
+
+#projectExperience .projectShow dd {
+  color: rgb(119, 119, 119);
+  margin-left: 0px;
+  float: left
+}
+
+#projectExperience .projectEdit {
+  padding: 0px 0px 0px 20px
+}
+
+#worksShow .workEdit {
+  padding: 0px 0px 0px 20px
+}
+
+#worksShow .workShow li a {
+  color: rgb(1, 152, 117);
+  text-decoration: underline
+}
+
+#worksShow .workShow p {
+  margin: 5px 0px 0px
+}
+
+#selfDescription .descriptionShow {
+  padding: 0px 20px;
+  position: relative
+}
+
+.mycenterR {
+  background: rgb(250, 250, 250);
+  padding: 15px 20px;
+  margin-bottom: 8px
+}
+
+.mycenterR h2 {
+  margin: 0px 0px 8px;
+  font-size: 18px;
+  font-weight: 600
+}
+
+.mycenterR h2 a {
+  color: rgb(1, 152, 117);
+  line-height: 26px;
+  font-size: 14px;
+  text-decoration: none;
+  float: right
+}
+
+.mycenterR h2 a:hover {
+  color: rgb(1, 152, 117)
+}
+
+.mycenterR a {
+  color: rgb(51, 51, 51);
+  text-decoration: underline
+}
+
+.mycenterR a:hover {
+  color: rgb(1, 152, 117)
+}
+
+#resumeSet {
+  overflow: hidden
+}
+
+#resumeSet label {
+  margin: 3px 0px;
+  color: rgb(85, 85, 85);
+  display: block
+}
+
+#resumeSet label input {
+  margin-top: 5px;
+  float: left
+}
+
+#resumeSet label span {
+  padding: 0px 5px;
+  color: rgb(51, 51, 51);
+  font-weight: 600
+}
+
+.resumeTip {
+  background: url("http://www.lagou.com:80/images/resumeset.png") no-repeat 20px
+    rgb(255, 247, 233);
+  margin: 10px 0px 10px -20px;
+  padding: 10px 0px 10px 50px;
+  width: 230px
+}
+
+#previewWrapper {
+  margin: 0px auto;
+  border: 12px solid rgb(163, 163, 163);
+  width: 726px
+}
+
+#previewWrapper .preview_header {
+  background: rgb(1, 152, 117);
+  padding: 9px 20px;
+  height: 26px;
+  color: rgb(255, 255, 255);
+  overflow: hidden
+}
+
+#previewWrapper .preview_header h1 {
+  margin: 0px;
+  line-height: 26px;
+  font-size: 18px;
+  font-weight: 600;
+  float: left
+}
+
+#previewWrapper .preview_header a {
+  background: rgb(0, 107, 82);
+  padding: 2px 12px;
+  color: rgb(255, 255, 255);
+  float: right
+}
+
+#previewWrapper .preview_content {
+  padding: 32px 20px 2px
+}
+
+#previewWrapper .preview_content .expectShow {
+  padding: 0px 10px 0px 20px
+}
+
+#previewWrapper .projectList .f16 {
+  
+}
+
+#previewWrapper .workList .f16 {
+  
+}
+
+#profileOverlay {
+  top: 63px;
+  width: 1024px;
+  height: 100%;
+  display: none;
+  position: absolute;
+  z-index: 20;
+  min-height: 100%;
+  opacity: 0.5;
+  background-color: rgb(255, 255, 255)
+}
+
+#resume_name {
+  position: relative
+}
+
+#resumeScore {
+  position: relative
+}
+
+#basicInfo {
+  position: relative
+}
+
+#expectJob {
+  position: relative
+}
+
+#workExperience {
+  position: relative
+}
+
+#projectExperience {
+  position: relative
+}
+
+#educationalBackground {
+  position: relative
+}
+
+#selfDescription {
+  position: relative
+}
+
+#worksShow {
+  position: relative
+}
+
+#myInfo {
+  position: relative
+}
+
+#myResume {
+  position: relative
+}
+
+#resumeSet {
+  position: relative
+}
+
+.m_portrait div {
+  background: url(http://www.lagou.com:80/images/profile_cover.png) no-repeat;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  z-index: 5;
 }
 </style>
-
 </head>
+
 <body>
-  <div class="demo">
-    <p><span>B</span><span>U</span><span>I</span><span>L</span><span>D</span></p>
-    <p>网站建设中，喝杯咖啡，稍后访问吧(´･ω･`)</p>
+  <div id="previewWrapper">
+    <div class="preview_header">
+      <h1>严东的简历</h1>
+    </div>
+    <!--end .preview_header-->
+
+    <div class="preview_content">
+      <div id="basicInfo" class="profile_box">
+        <h2>基本信息</h2>
+        <div class="basicShow">
+          <span>严东 |  男 | 
+             本科 | 
+            3年工作经验  | 武汉<br/>
+             高级Java工程师 · 武汉映嘉时代科技有限公司 | 其他 · 北大青鸟<br />
+            15172498305 | 20012002er@gmail.com<br />
+            
+          </span>
+          <div class="m_portrait">
+            <div></div>
+            <img src="http://www.lagou.com:80/upload/headpic/ff8080814314e0680143183f60fa233d.jpg" width="120"
+              height="120" alt="" />
+          </div>
+        </div>
+        <!--end .basicShow-->
+      </div>
+      <!--end #basicInfo-->
+      
+      <div id="expectJob" class="profile_box">
+        <h2>期望工作</h2>
+        <div class="expectShow">
+          <span>
+          武汉，全职，月薪5k-10k，JAVA工程师
+          </span>
+        </div>
+        <!--end .expectShow-->
+      </div>
+      <!--end #expect-->
+
+      <div id="workExperience" class="profile_box">
+        <h2>工作经历</h2>
+        <div class="experienceShow">
+          <ul class="wlist clearfix">
+            <li class="clear">
+              <span class="c9">2012.03-至今</span>
+              <div>
+                <img src="http://www.lagou.com:80/images/logo_default.png"
+                  width="56" height="56" alt="武汉映嘉时代科技有限公司" />
+                <h3>高级Java工程师</h3>
+                <h4>武汉映嘉时代科技有限公司</h4>
+              </div>
+            </li> 
+          </ul>
+        </div>
+        <!--end .experienceShow-->
+      </div>
+      <!--end #workExperience-->
+       
+      <div id="projectExperience" class="profile_box">
+        <h2>项目经验</h2>
+        <div class="projectShow">
+          <ul class="plist clearfix">
+            <li>
+              <div class="projectList">
+                <div class="f16 mb10">
+                  网上快递点餐系统平台开发，产品负责人  <span class="c9">(2014.04-至今)</span>
+                </div>
+                <dl class="clearfix dl1">
+                  <!-- <dt>项目描述:</dt> -->
+                  <dd>基于一套后台商品管理，物流管理，客服接单系统，订单管理，评价系统，LBS系统以及商户系统的B2C点餐平台的开发，结合app与微信的移动端，让用户用最便捷的方式点餐，同时加入类团购的商业模式，积分兑换的多种购买方式，可以快速提升商家的销售额与口碑。
+<br />技术层面采用spring mvc模式快速开发，同时加入spring security保证安全，整合lucene加快全站搜索，在方法层面使用细粒度的声明事务，使用网络挖掘分析大数据，业务层面使用mysql数据库，在索引及图片存储中使用redis数据库，加快全站访问速度，降低服务器压力，使用Siege对网站进行压力测试，使用JUnit完成单元测试。
+<br />项目管理中，使用SVN进行代码库的管理，使用MAVEN管理项目应用包，使用BugTrack进行软件缺陷管理，使用Redmine进行项目整体进度管理。</dd>
+                </dl>
+                <!-- <dl class="clearfix dl2">
+                    <dt>项目职责:</dt>
+                    <dd></dd>
+                  </dl> -->
+              </div>
+            </li>             <li>
+              <div class="projectList">
+                <div class="f16 mb10">
+                  微信集成应用o2o及分销系统，后台开发  <span class="c9">(2013.12-2014.04)</span>
+                </div>
+                <dl class="clearfix dl1">
+                  <!-- <dt>项目描述:</dt> -->
+                  <dd>使用微信平台，开发个人空间产品，网上商城系统，实现社交应用的一般功能，同时集成商城交易系统，实现客户商品买卖的微信实现，线上选单预定，先下付款提货的一套流程，高度突出个人展示的平台，空间留言互动，之间的交友也是一大特色。</dd>
+                </dl>
+                <!-- <dl class="clearfix dl2">
+                    <dt>项目职责:</dt>
+                    <dd></dd>
+                  </dl> -->
+              </div>
+            </li>             <li>
+              <div class="projectList">
+                <div class="f16 mb10">
+                  微信cms微网站搭建系统，开发团队分组负责人  <span class="c9">(2013.08-2013.12)</span>
+                </div>
+                <dl class="clearfix dl1">
+                  <!-- <dt>项目描述:</dt> -->
+                  <dd>利用微信平台，为客户提供一系列自定义的微信可访问的网站创建、修改工具，客户可通过此系统高度模块化和高度自由化的创建自己的微信站点，可以与关注自己公众号的微信会员互动，方便的宣传自己的品牌和产品，还可以集合微信支付系统，方便的加入商城功能，微信下单，享受高度的移动便捷生活。</dd>
+                </dl>
+                <!-- <dl class="clearfix dl2">
+                    <dt>项目职责:</dt>
+                    <dd></dd>
+                  </dl> -->
+              </div>
+            </li>             <li>
+              <div class="projectList">
+                <div class="f16 mb10">
+                  移动汇报系统，webservice开发  <span class="c9">(2013.06-2013.08)</span>
+                </div>
+                <dl class="clearfix dl1">
+                  <!-- <dt>项目描述:</dt> -->
+                  <dd>android和ios手机客户端的app，功能主要有上下班打卡，员工汇报的上传，可上传语音图片和文字，员工自身邮件接收和公司公告的阅读，任务的传达和完成，管理员管理员工和部门，领导查看员工事项以及阅读员工汇报，对员工出勤的统计和考察。</dd>
+                </dl>
+                <!-- <dl class="clearfix dl2">
+                    <dt>项目职责:</dt>
+                    <dd></dd>
+                  </dl> -->
+              </div>
+            </li>             <li>
+              <div class="projectList">
+                <div class="f16 mb10">
+                  微信下单系统，webservice开发  <span class="c9">(2013.03-2013.05)</span>
+                </div>
+                <dl class="clearfix dl1">
+                  <!-- <dt>项目描述:</dt> -->
+                  <dd>利用腾讯微信平台，集合商家自身产品，完成一套微信下单点单和支付系统，集合商家的公众账号，方便的与客户沟通互动，客户直接利用微信绑定完成一系列的下单点单流程，方便快捷。</dd>
+                </dl>
+                <!-- <dl class="clearfix dl2">
+                    <dt>项目职责:</dt>
+                    <dd></dd>
+                  </dl> -->
+              </div>
+            </li>             <li>
+              <div class="projectList">
+                <div class="f16 mb10">
+                  送餐物流快递管理系统，后台开发  <span class="c9">(2012.10-2013.03)</span>
+                </div>
+                <dl class="clearfix dl1">
+                  <!-- <dt>项目描述:</dt> -->
+                  <dd>产品的库存管理，派送点的全城联网，快递员个人手机客户端的api开发，支付系统的配套完善，pc端点单送单系统的开发，商品的上架和下架管理，送餐网站的开发，网上购物车系统的完善。</dd>
+                </dl>
+                <!-- <dl class="clearfix dl2">
+                    <dt>项目职责:</dt>
+                    <dd></dd>
+                  </dl> -->
+              </div>
+            </li>             <li>
+              <div class="projectList">
+                <div class="f16 mb10">
+                  商家积分团购系统，后台开发，webservice开发  <span class="c9">(2012.03-2012.12)</span>
+                </div>
+                <dl class="clearfix dl1">
+                  <!-- <dt>项目描述:</dt> -->
+                  <dd>商家积分和会员积分的维护，会员抽奖的管理，商家与商品的维护管理，公司部门员工的信息管理，积分兑现金钱的银行流水账，二位码的生成与维护，短信网关的管理，邮件的生成与发送，邮件服务器的搭建，事务的管理，权限的细粒度控制，aop对操作事务的记录等等。</dd>
+                </dl>
+                <!-- <dl class="clearfix dl2">
+                    <dt>项目职责:</dt>
+                    <dd></dd>
+                  </dl> -->
+              </div>
+            </li> 
+          </ul>
+        </div>
+        <!--end .projectShow-->
+      </div>
+      <!--end #projectExperience-->
+       
+      <div id="educationalBackground" class="profile_box">
+        <h2>教育背景</h2>
+        <div class="educationalShow">
+          <ul class="elist clearfix">
+            <li class="clear"><span
+              class="c9">2010-2012</span>
+              <div>
+                <h3>JAVAEE，其他</h3>
+                <h4>北大青鸟</h4>
+              </div></li>             <li class=""><span
+              class="c9">2005-2010</span>
+              <div>
+                <h3>生物工程，本科</h3>
+                <h4>华中农业大学</h4>
+              </div></li> 
+          </ul>
+        </div>
+        <!--end .educationalShow-->
+      </div>
+      <!--end #educationalBackground-->
+       
+      <div id="selfDescription" class="profile_box">
+        <h2>自我描述</h2>
+        <div class="descriptionShow">待人热情，诚实，乐于与人交流，喜欢具有挑战性的工作。 
+<br />学习能力强，乐于接受新生事物，能够快速投入工作状态。 
+<br />喜欢IT的前沿科技与技能，对自身技术永不满足，适应时代的潮流。</div>
+        <!--end .descriptionShow-->
+      </div>
+      <!--end #selfDescription-->
+       
+      <div id="worksShow" class="profile_box">
+        <h2>作品展示</h2>
+        <div class="workShow">
+          <ul class="slist clearfix">
+            <li>
+              <div class="workList c7">
+                <div class="f16">
+                  网址：<a href="http://www.paijifen.cn/" target="_blank">http://www.paijifen.cn/</a>
+                </div>
+                <p>派积分商家积分团购</p>
+              </div>
+            </li>             <li>
+              <div class="workList c7">
+                <div class="f16">
+                  网址：<a href="http://www.xiakuajie.com/" target="_blank">http://www.xiakuajie.com/</a>
+                </div>
+                <p>呷跨界网上点餐</p>
+              </div>
+            </li>             <li>
+              <div class="workList c7">
+                <div class="f16">
+                  网址：<a href="http://www.weepai.com/" target="_blank">http://www.weepai.com/</a>
+                </div>
+                <p>微派微信营销</p>
+              </div>
+            </li> 
+          </ul>
+        </div>
+        <!--end .workShow-->
+      </div>
+      <!--end #worksShow-->
+    </div>
+    <!--end .preview_content-->
   </div>
   <div style="text-align: center;">  
     <p>你可以访问以下实验性的内容</p>
     <p>
+      <a href="audio/index.html" title="疯狂变色的播放器">疯狂变色的播放器</a>&nbsp;&nbsp;<a href="qflappy/index.html" title="自动飞翔的flappy bird">自动飞翔的flappy bird</a>
       <a href="audio" title="疯狂变色的播放器">疯狂变色的播放器</a>&nbsp;&nbsp;<a href="qflappy" title="自动飞翔的flappy bird">自动飞翔的flappy bird</a>
     </p>
   </div>
+  <!--end #previewWrapper-->
 </body>
-</html>
