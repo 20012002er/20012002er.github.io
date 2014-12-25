@@ -1,0 +1,15 @@
+# Site settings
+title: 懒熊toby的博客
+email: 20012002er@gmail.com
+description: 懒熊toby的博客 java技术博客 后端工程师 分布式 mongodb nodejs python 分享技术
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://127.0.0.1" # the base hostname & protocol for your site
+twitter_username: 20012002er
+github_username:  20012002er
+
+# Build settings
+markdown: kramdown
+
+# 分页功能
+paginate: 5
+paginate_path: "page:num"
