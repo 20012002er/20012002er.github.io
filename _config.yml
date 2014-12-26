@@ -1,15 +1,70 @@
-# Site settings
-title: 懒熊toby的博客
-email: 20012002er@gmail.com
-description: 懒熊toby的博客 java技术博客 后端工程师 分布式 mongodb nodejs python 分享技术
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://toby-blog.com" # the base hostname & protocol for your site
-twitter_username: 20012002er
-github_username:  20012002er
+title:            Geek的疯狂世界
+description:      懒熊toby的博客 java技术博客 后端工程师 分布式 mongodb nodejs python 分享技术
+disqus_shortname: toby
+reading_time:     true
+words_per_minute: 200
+# Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
+# When testing locally leave blank or use http://localhost:4000
+url:              http://127.0.0.1:4000
 
-# Build settings
-markdown: kramdown
+# Owner/author information
+owner:
+  name:           懒熊toby
+  avatar:         avatar_b.jpg
+  bio:            "作为一个苦逼的Java程序猿和一个苦逼的Geek，只能写点稀奇古怪的东西来发发牢骚以平复我日益扭曲的心灵。"
+  email:          20012002er@gmail.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        20012002er
+  facebook:       
+  github:         20012002er
+  stackexchange:  
+  linkedin:       
+  instagram:      
+  flickr:         
+  tumblr:         
+  # For Google Authorship https://plus.google.com/authorship
+  # google plus id, include the '+', eg +mmistakes
+  google_plus:    
 
-# 分页功能
+# Background image to be tiled on all pages
+background:   
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:   
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:         
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Asia/Shanghai
+future:      true
+highlighter: pygments
+markdown:    kramdown
+gems:
+  - jekyll-sitemap
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+
+# Amount of post to show on home page
 paginate: 5
-paginate_path: "page:num"
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: true
+
+  coderay:
+    coderay_line_numbers: nil
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]

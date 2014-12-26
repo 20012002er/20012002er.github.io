@@ -1,238 +1,245 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>懒熊toby的博客 &#8211; Geek的疯狂世界</title>
+<meta name="description" content="懒熊toby的博客 java技术博客 后端工程师 分布式 mongodb nodejs python 分享技术">
+<meta name="keywords" content="blog, share">
 
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://127.0.0.1:4000/images/index-abstract.jpg">
 
-  <title>懒熊toby的博客</title>
-  <meta name="description" content="懒熊toby的博客 java技术博客 后端工程师 分布式 mongodb nodejs python 分享技术">
+<meta name="twitter:title" content="懒熊toby的博客">
+<meta name="twitter:description" content="懒熊toby的博客 java技术博客 后端工程师 分布式 mongodb nodejs python 分享技术">
+<meta name="twitter:creator" content="@20012002er">
 
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://127.0.0.1/">
-  <link rel="alternate" type="application/rss+xml" title="懒熊toby的博客" href="http://127.0.0.1/feed.xml" />
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="懒熊toby的博客">
+<meta property="og:description" content="懒熊toby的博客 java技术博客 后端工程师 分布式 mongodb nodejs python 分享技术">
+<meta property="og:url" content="http://127.0.0.1:4000/index.html">
+<meta property="og:site_name" content="Geek的疯狂世界">
+
+
+
+
+
+<link rel="canonical" href="http://127.0.0.1:4000/">
+<link href="http://127.0.0.1:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Geek的疯狂世界 Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://127.0.0.1:4000/assets/css/main.css">
+<!-- Webfonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="http://127.0.0.1:4000/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://127.0.0.1:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://127.0.0.1:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://127.0.0.1:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://127.0.0.1:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://127.0.0.1:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://127.0.0.1:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
 </head>
 
+<body id="post-index" class="feature">
 
-  <body>
-
-    <header class="site-header">
-
-  <div class="wrapper">
-
-    <a class="site-title" href="/">懒熊toby的博客</a>
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-
-      <div class="trigger">
-        
-          
-          <a class="page-link" href="/about/">About</a>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </div>
-    </nav>
-
-  </div>
-
-</header>
-
-
-    <div class="page-content">
-      <div class="wrapper">
-        <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Dec 25, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2014/12/25/markdown.html">markdown</a>
-        </h2>
-        <p>
-          <p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href="http://127.0.0.1:4000/">首页</a></li>
+		<li>
+			<a href="#">关于</a>
+			<ul class="dl-submenu">
+				<li>
+					<img src="http://127.0.0.1:4000/images/avatar_b.jpg" alt="懒熊toby photo" class="author-photo">
+					<h4>懒熊toby</h4>
+					<p>作为一个苦逼的Java程序猿和一个苦逼的Geek，只能写点稀奇古怪的东西来发发牢骚以平复我日益扭曲的心灵。</p>
+				</li>
+				<li><a href="http://127.0.0.1:4000/about/"><span class="btn btn-inverse">了解更多</span></a></li>
+				<li>
+					<a href="mailto:20012002er@gmail.com"><i class="fa fa-fw fa-envelope"></i> Email</a>
+				</li>
+				<li>
+					<a href="http://twitter.com/20012002er"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+				</li>
+				
+				
+				
+				<li>
+					<a href="http://github.com/20012002er"><i class="fa fa-fw fa-github"></i> GitHub</a>
+				</li>
+				
+				
+				
+				
+			</ul><!-- /.dl-submenu -->
+		</li>
+		<li>
+			<a href="#">文章</a>
+			<ul class="dl-submenu">
+				<li><a href="http://127.0.0.1:4000/posts/">所有文章</a></li>
+				<li><a href="http://127.0.0.1:4000/tags/">所有标签</a></li>
+			</ul>
+		</li>
+		
+	    
+	        
+	        
+	    <li><a href="http://weibo.com/20012002er" target="_blank">我的微博</a></li>
+	  
+	</ul><!-- /.dl-menu -->
+</nav><!-- /.dl-menuwrapper -->
 
 
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 25, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2014/12/25/java-5.html">java</a>
-        </h2>
-        <p>
-          <p>
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-</p>
-
-
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 25, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2014/12/25/java-4.html">java</a>
-        </h2>
-        <p>
-          <p>
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-</p>
-
-
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 25, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2014/12/25/java-3.html">java</a>
-        </h2>
-        <p>
-          <p>
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-</p>
-
-
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 25, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2014/12/25/java-2.html">java</a>
-        </h2>
-        <p>
-          <p>
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-</p>
-
-
-        </p>
-      </li>
-    
-  </ul>
-
-  <!-- 分页链接 -->
-  <div id="post-pagination" class="pagination">
+<div class="entry-header">
   
-    <p class="previous disabled">
-      <span>Previous</span>
-    </p>
   
+    <div class="entry-image">
+      <img src="http://127.0.0.1:4000/images/index-abstract.jpg" alt="懒熊toby的博客">
+    </div><!-- /.entry-image -->
+  
+  <div class="header-title">
+    <div class="header-title-wrap">
+      <h1>Geek的疯狂世界</h1>
+      <h2>懒熊toby的博客</h2>
+    </div><!-- /.header-title-wrap -->
+  </div><!-- /.header-title -->
+</div><!-- /.entry-header -->
 
-  <ul class="pages">
-    <li class="page">
+<div id="main" role="main">
+  
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-12-26T00:00:00+08:00"><a href="http://127.0.0.1:4000/twenty-hard/">2014-12-26</a></time></span><span class="author vcard"><span class="fn"><a href="http://127.0.0.1:4000/about/" title="About 懒熊toby">懒熊toby</a></span></span>
+      
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        
+        Reading time ~1 minute
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="http://127.0.0.1:4000/twenty-hard/" rel="bookmark" title="二十几岁不会是人生最艰难的时候" itemprop="url">二十几岁不会是人生最艰难的时候</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <figure>
+	<img src="http://m1.img.srcdd.com/farm4/d/2013/0326/11/3715E90E34B3D2B64143C39300D4750A_B500_900_500_335.JPEG" alt="" />
+</figure>
+
+<p>知乎上最近有个很热门的讨论，话题就是“二十几岁是不是人生最艰难的时候？”。下面是一些我觉得挺有意思的回答。</p>
+
+<p>“本人女，28岁，硕士毕业四年，刚遭遇在一起七年的丈夫孕期出轨，离婚，自己带着个不到一岁的女儿生活。曾经的小女人，现在要扛起两个人的人生。艰难得他妈的无法想象。但这肯定不是我最艰难的时候。以后面对的困难我自己也没有办法想象，也不想去想太多，自己该尽的责任要尽，该做的事情要做，有种生就有种养。要快乐，珍惜亲人，享受生活。遇到合适的男人还要嫁，不要怕。高兴自己还能去折腾，去扛起来，还有人值得我去爱。男人们怕什么呢？”</p>
+
+<p>“20多岁，没钱，没房，没车，要考虑自己的前途，考虑给另一半幸福，考虑父母。出去做事又没有地位，都有比你年龄大，级别高的人，一边教训你一边抢你的女朋友。这日子真艰难，过了20多岁就好了。这是我25岁前的想法。今年我26岁，我依然没钱，没房，没车，依然担心自己的前途，依然要考虑所有要考虑的事情。只是，我想明白了。这些虽然难，但绝不是最难的时刻。”
+“最艰难的时刻，是你等到人生走完大半，才发现自己的内心挣扎，才跌落到艰辛的生活，才遭遇到人生的重大变故和失败打击。因为，那个时候，你的希望，你的可能，你的变数，已然不多了。”</p>
+
+<p>“最艰难的时刻应该是放弃自己，放弃希望的那一刻，可能会发生在人生任何一个时刻，而不仅仅是二十多岁的时刻。如果你没有放弃，那么最艰难的时刻就不会到来，听起来有点像鸡汤。反正经历过很多那种坑爹的事情之后，很多都会看淡，没想象中的那么恐怖。”</p>
+
+<p>“26-30是一段苦闷的历程，离成功仿佛太远，却又过了推倒重来的年岁，不妨放低自己的心态，踏踏实实、不计得失的做好手头的事。痛苦、挣扎是件好事儿，说明你还没有麻木。”</p>
+
+<p>“昨晚夜游回家有幸踩了一坨狗屎，我的狗屎运也快来了。”</p>
+
+<p>“借用叔本华的解释：我们在早年主要是通过诗歌、小说，而不是通过现实来认识生活。我们处于旭日初升的青春年华，诗歌、小说所描绘的影像，在我们的眼前闪烁；我们备受渴望的折磨，巴不得看到那些景象成为现实，迫不及待地要去抓住彩虹。年轻人期望他们的一生能像一部趣味盎然的小说。他们的失望也就由此而来。”</p>
+
+<p>“七十岁疾病缠身的你会不会羡慕二十岁健康的我。——不会，因为七十岁的我可以是七十岁，可以是二十岁，也可以是十岁。本以为快乐不会长久，哪知一天比一天快乐。人生只不过是不断的选择，想办法玩得开心。”</p>
+
+<p>二十几岁的年纪，我们羞愧于自己的一无所有，望着比自己年长一些的人们，家庭事业双双得意，总是羡慕不已。却不知那些比我们年长一些的人，数着早生的白发跟眼角不和谐的皱纹，忧心着孩子的课业，挂念着双亲的健康，心中怀念的却是十多年前球场边那个意气风发的少年。而事实上多少人感觉到的那份艰难，是源自于面对强大对手时实力悬殊而造成的恐惧，却并非是残酷现实所带来的无力感。毕竟在艰难这个借口下，有太多人一味埋怨，却逃避改变。
+二十多岁的时候，我们以为这种日子会持续很久，以为眼前这个难关重要到决定生死。到后来，我们曾经以为根本就不可能迈不过去的门槛最终还是迈过去了，虽然也许是一路磕磕绊绊的。我们一直以为最艰难的总是当下，却发现人生从来不曾有最艰难，只会有更艰难。唯一还值得庆幸的是，所有打不倒你的都将使你变得更强大，所有打倒了你的也并没将你彻底击垮。</p>
+
+<p>电影《这个杀手不太冷》里，小萝莉Mathilda问Léon：“ Is life always this hard, or is it just when you’re a kid? ”，Léon回答说：“Always like this.”你看吧，就算人生已经如此的艰难，有些事情还是需要揭穿。</p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-12-26T00:00:00+08:00"><a href="http://127.0.0.1:4000/eat-youku/">2014-12-26</a></time></span><span class="author vcard"><span class="fn"><a href="http://127.0.0.1:4000/about/" title="About 懒熊toby">懒熊toby</a></span></span>
+      
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        
+        Reading time ~1 minute
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="http://127.0.0.1:4000/eat-youku/" rel="bookmark" title="《吃早饭啦》2010华人优秀原创动画短片" itemprop="url">《吃早饭啦》2010华人优秀原创动画短片</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <iframe height="400" width="640" src="http://player.youku.com/embed/XMjM0NDIwMDMy" frameborder="0"> </iframe>
+
+<p>山东青岛一户平凡普通的家庭。清晨六点钟，天蒙蒙亮，小孩睁开惺忪的睡眼，见窗外昏暗，又继续倒头睡觉。当他再次醒来时，发现窗外已然大亮，想再赖床但是被妈妈掀开被子后慌忙起身穿衣洗漱，踉跄地来到餐桌前。摆在他面前的是一碗稀松平常的挂面汤，小孩没有什么胃口，可是又无法违抗母亲的命令，而饭桌的另一边，爸爸埋头看报纸，事不关己的样子。于是乎他只得老老实实坐下吃面。与此同时，母亲也扯来一份报纸研读，突然发现一条关于早餐健康饮食的新闻，考虑到孩子的营养极度不均衡，妈妈又迅速增加了早餐的份额，令男孩苦不堪言……</p>
+
+<p>你有多久没有好好坐到餐桌前吃早餐了呢？又有多久没有吃到家人做的早餐了呢？</p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+
+<div class="pagination">
+  
+    Previous
+  
+  <ul class="inline-list">
+    <li>
       
         <span class="current-page">1</span>
       
     </li>
-
-    
-      <li class="page">
-        
-          <a href="/page2">2</a>
-        
-      </li>
     
   </ul>
-
   
-    <p class="next">
-      <a href="/page2">Next</a>
-    </p>
+    Next
   
+</div><!-- /.pagination -->
+</div><!-- /#main -->
 
-</div>
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2014 懒熊toby. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a></span>
+  </footer>
+</div><!-- /.footer-wrapper -->
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
-</div>
-
-      </div>
-    </div>
-
-    <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">懒熊toby的博客</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
-          <li>懒熊toby的博客</li>
-          <li><a href="mailto:20012002er@gmail.com">20012002er@gmail.com</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col  footer-col-2">
-        <ul class="social-media-list">
-          
-          <li>
-            <a href="https://github.com/20012002er">
-              <span class="icon  icon--github">
-                <svg viewBox="0 0 16 16">
-                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
-                </svg>
-              </span>
-
-              <span class="username">20012002er</span>
-            </a>
-          </li>
-          
-
-          
-          <li>
-            <a href="https://twitter.com/20012002er">
-              <span class="icon  icon--twitter">
-                <svg viewBox="0 0 16 16">
-                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
-                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
-                </svg>
-              </span>
-
-              <span class="username">20012002er</span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="footer-col  footer-col-3">
-        <p class="text">懒熊toby的博客 java技术博客 后端工程师 分布式 mongodb nodejs python 分享技术</p>
-      </div>
-    </div>
-
-  </div>
-
-</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://127.0.0.1:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://127.0.0.1:4000/assets/js/scripts.min.js"></script>
 
 
-  </body>
 
+<!--  -->          
+
+</body>
 </html>
