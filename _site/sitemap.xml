@@ -1,48 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://127.0.0.1:4000/twenty-hard/</loc>
+    <loc>http://toby-blog.com/twenty-hard/</loc>
     <lastmod>2014-12-26T00:00:00+08:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://127.0.0.1:4000/eat-youku/</loc>
+    <loc>http://toby-blog.com/eat-youku/</loc>
     <lastmod>2014-12-26T00:00:00+08:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://127.0.0.1:4000/404.html</loc>
-    <lastmod>2014-12-26T13:08:46+08:00</lastmod>
+    <loc>http://toby-blog.com/math-new/</loc>
+    <lastmod>2014-12-25T00:00:00+08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://toby-blog.com/404.html</loc>
+    <lastmod>2014-12-26T13:49:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://127.0.0.1:4000/posts/</loc>
-    <lastmod>2014-12-26T13:08:46+08:00</lastmod>
+    <loc>http://toby-blog.com/posts/</loc>
+    <lastmod>2014-12-26T13:49:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://127.0.0.1:4000/</loc>
-    <lastmod>2014-12-26T13:08:46+08:00</lastmod>
+    <loc>http://toby-blog.com/tags/</loc>
+    <lastmod>2014-12-26T13:49:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://toby-blog.com/</loc>
+    <lastmod>2014-12-26T13:49:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://127.0.0.1:4000/tags/</loc>
-    <lastmod>2014-12-26T13:08:46+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://127.0.0.1:4000/about/</loc>
-    <lastmod>2014-12-26T13:08:46+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://127.0.0.1:4000/theme-setup/</loc>
-    <lastmod>2014-12-26T13:08:46+08:00</lastmod>
+    <loc>http://toby-blog.com/about/</loc>
+    <lastmod>2014-12-26T13:49:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

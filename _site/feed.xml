@@ -2,26 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">Geek的疯狂世界</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://127.0.0.1:4000/feed.xml" />
-<link rel="alternate" type="text/html" href="http://127.0.0.1:4000" />
-<updated>2014-12-26T13:08:46+08:00</updated>
-<id>http://127.0.0.1:4000/</id>
+<link rel="self" type="application/atom+xml" href="http://toby-blog.com/feed.xml" />
+<link rel="alternate" type="text/html" href="http://toby-blog.com" />
+<updated>2014-12-26T13:49:16+08:00</updated>
+<id>http://toby-blog.com/</id>
 <author>
   <name>懒熊toby</name>
-  <uri>http://127.0.0.1:4000/</uri>
+  <uri>http://toby-blog.com/</uri>
   <email>20012002er@gmail.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[二十几岁不会是人生最艰难的时候]]></title>
- <link rel="alternate" type="text/html" href="http://127.0.0.1:4000/twenty-hard/" />
-  <id>http://127.0.0.1:4000/twenty-hard</id>
+ <link rel="alternate" type="text/html" href="http://toby-blog.com/twenty-hard/" />
+  <id>http://toby-blog.com/twenty-hard</id>
   <published>2014-12-26T00:00:00+08:00</published>
   <updated>2014-12-26T00:00:00+08:00</updated>
   <author>
     <name>懒熊toby</name>
-    <uri>http://127.0.0.1:4000</uri>
+    <uri>http://toby-blog.com</uri>
     <email>20012002er@gmail.com</email>
   </author>
   <content type="html">&lt;figure&gt;
@@ -50,19 +50,19 @@
 
 &lt;p&gt;电影《这个杀手不太冷》里，小萝莉Mathilda问Léon：“ Is life always this hard, or is it just when you’re a kid? ”，Léon回答说：“Always like this.”你看吧，就算人生已经如此的艰难，有些事情还是需要揭穿。&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://127.0.0.1:4000/twenty-hard/&quot;&gt;二十几岁不会是人生最艰难的时候&lt;/a&gt; was originally published by 懒熊toby at &lt;a href=&quot;http://127.0.0.1:4000&quot;&gt;Geek的疯狂世界&lt;/a&gt; on December 26, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://toby-blog.com/twenty-hard/&quot;&gt;二十几岁不会是人生最艰难的时候&lt;/a&gt; was originally published by 懒熊toby at &lt;a href=&quot;http://toby-blog.com&quot;&gt;Geek的疯狂世界&lt;/a&gt; on December 26, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[《吃早饭啦》2010华人优秀原创动画短片]]></title>
- <link rel="alternate" type="text/html" href="http://127.0.0.1:4000/eat-youku/" />
-  <id>http://127.0.0.1:4000/eat-youku</id>
+ <link rel="alternate" type="text/html" href="http://toby-blog.com/eat-youku/" />
+  <id>http://toby-blog.com/eat-youku</id>
   <published>2014-12-26T00:00:00+08:00</published>
   <updated>2014-12-26T00:00:00+08:00</updated>
   <author>
     <name>懒熊toby</name>
-    <uri>http://127.0.0.1:4000</uri>
+    <uri>http://toby-blog.com</uri>
     <email>20012002er@gmail.com</email>
   </author>
   <content type="html">&lt;iframe height=&quot;400&quot; width=&quot;640&quot; src=&quot;http://player.youku.com/embed/XMjM0NDIwMDMy&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
@@ -71,7 +71,84 @@
 
 &lt;p&gt;你有多久没有好好坐到餐桌前吃早餐了呢？又有多久没有吃到家人做的早餐了呢？&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://127.0.0.1:4000/eat-youku/&quot;&gt;《吃早饭啦》2010华人优秀原创动画短片&lt;/a&gt; was originally published by 懒熊toby at &lt;a href=&quot;http://127.0.0.1:4000&quot;&gt;Geek的疯狂世界&lt;/a&gt; on December 26, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://toby-blog.com/eat-youku/&quot;&gt;《吃早饭啦》2010华人优秀原创动画短片&lt;/a&gt; was originally published by 懒熊toby at &lt;a href=&quot;http://toby-blog.com&quot;&gt;Geek的疯狂世界&lt;/a&gt; on December 26, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[俗语新解，用数学的眼光看世界]]></title>
+ <link rel="alternate" type="text/html" href="http://toby-blog.com/math-new/" />
+  <id>http://toby-blog.com/math-new</id>
+  <published>2014-12-25T00:00:00+08:00</published>
+  <updated>2014-12-25T00:00:00+08:00</updated>
+  <author>
+    <name>懒熊toby</name>
+    <uri>http://toby-blog.com</uri>
+    <email>20012002er@gmail.com</email>
+  </author>
+  <content type="html">&lt;figure&gt;
+	&lt;img src=&quot;http://m3.img.srcdd.com/farm5/d/2012/1030/16/25A25BFCC8672FE7CAB765BDE868823E_B500_900_260_196.JPEG&quot; alt=&quot;&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;很多俗语，其实都是人们对经验的概括。它们未必很准确，却总是有些道理。如果我们尝试数学的眼光去分析这些俗语，又会得到什么结果呢？&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;上得山多终遇虎&lt;/h2&gt;
+
+&lt;p&gt;靠山吃山靠水吃水，住在山边的人，馋了上山打猎，病了上山采药，总之是经常与大自然亲密接触。但是，在古代，环境还没有被破坏得这么厉害，山上有老虎是常有的事。尽管一只老虎的领地可达数平方公里，它也不是天天在领地闲逛，所以上山打一次猎遇到老虎的概率也不高。但对于那些天天上山打猎的老猎人来说，在职业生涯中一次老虎都没有遇到过，倒是件稀有的事。所谓“上得山多终遇虎”，大概就是指的这种情况。&lt;/p&gt;
+
+&lt;p&gt;假设猎人每次上山打猎，遇到老虎的概率是p，也就是说遇不到老虎的概率是1-p。那么，在m次打猎中，每次都没有遇到过老虎的概率就是(1-p)^m。只要有可能遇到老虎，相当于说p&amp;gt;0，当m越来越大时，(1-p)^m就越来越小，趋向于0，也就是说，尽管每次倒霉遇上老虎的概率不高，但如果每天都去打猎的话，总有一天会倒霉的。&lt;/p&gt;
+
+&lt;p&gt;可能有人会反过来想：我每次买彩票，中头奖的概率不是0，那么，总有一天我会中头奖的。这种想法既对又不对，理论上来说，的确一直买下去的话总有一天会中奖，但是大概要买多少遍才会中头奖呢？以36选7为例，中头奖的概率是1/C(36,7)，所以大概要买C(36,7)期会有一期中头奖，那是大概八百万期，也就是大概两万年。两万年后，福彩是否存在还是个问题。&lt;/p&gt;
+
+&lt;p&gt;而对于猎人来说，每次上山遇虎的概率显然没有那么低。要是听到虎啸也算遇虎的话，千分之一应该算是一个不错的估算。这样算来，大概打一千次猎就会有一次遇到老虎，对于经常上山的猎人来说大概十多年就有这个数了，难怪“上得山多终遇虎”。&lt;/p&gt;
+
+&lt;p&gt;现在环境破坏得严重，要“遇虎“，大概只能到动物园去了，山里反倒非常安全。“盛世出猛虎”之类的，只能是笑话了。&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http://m1.img.srcdd.com/farm5/d/2012/1030/16/AC4246778F9DD5382B37791F1984CAD7_B500_900_500_440.JPEG&quot; alt=&quot;&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;坐吃山空&lt;/h2&gt;
+
+&lt;p&gt;“坐吃山空”，大概是告诫那些只愿吃闲饭不愿干活的人，无论家里有多少钱，总有一天要吃光的。&lt;/p&gt;
+
+&lt;p&gt;在忽略货币变化的前提下，假设家里的存款是M，一顿饭只需要花费m，这些存款也只能支撑M/m顿饭，也就是说是不可能永远吃闲饭吃下去的。&lt;/p&gt;
+
+&lt;p&gt;用数学的语言来说，只要m不是0，无论m多么小，将很多同样的m加起来，我们可以得到要多大有多大的数。这种性质叫做实数的阿基米德性质。&lt;/p&gt;
+
+&lt;p&gt;利用阿基米德性质，我们能解释0.999…=1的问题。假设p=1-0.999…，如果p不等于0的话，p就是一个正实数。根据阿基米德性质，总存在一个整数M，使得M*p&amp;gt;=1。于是p=1-p=0.999…。然而，这是不可能的，因为1/M总会在小数点后某一位开始非0，导致1-1/M不等于0.999…。这个矛盾表明我们的假设是错误的，也就是说其实0.999…=1。&lt;/p&gt;
+
+&lt;p&gt;很多我们常见的数都有阿基米德性质，比如说有理数，实数，复数。当然，对于复数来说，“要多大有多大”就要重新定义了，一般是用它的范数——也就是在复平面上与原点的距离——来定义的。在复数里边，就应该讲是可以得到范数要多大有多大的数。&lt;/p&gt;
+
+&lt;p&gt;也有一些数是没有阿基米德性质的，比如说p进数。它们的结构普遍比实数的要复杂得多，也能表达更多的东西。&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http://m1.img.srcdd.com/farm5/d/2012/1030/16/1F55655BAE5D1A8EE6D50944072C34C0_B500_900_500_420.JPEG&quot; alt=&quot;&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;久赌必输&lt;/h2&gt;
+
+&lt;p&gt;从来只听过开赌场而富甲一方的，没听过有赌徒能通过赌博而过上幸福生活的，反倒是家破人亡的不计其数。在赌场赌博的话，既有抽头，赌局也是对赌场有利的。说难听点，去赌场赌钱就相当于直接送钱给赌场老板。就算是一对一机会均等的赌局，要是一直赌下去的话，也总有一天会输光的。这就是“久赌必输”。&lt;/p&gt;
+
+&lt;p&gt;假设每盘赌局的赌注是1，而赌徒的财产是n。在每盘赌局中，赌徒有1/2的概率赢，有1/2的概率输。那么，如果一直这样赌下去的话，赌徒输光的概率是多少呢？&lt;/p&gt;
+
+&lt;p&gt;显然，赌徒的钱越多，输光需要的局数也越多。当赌徒的财产是n时，我们记输光的概率为p(n)。因为每次赌局有一半的可能赢，一半的可能输，赢的时候财产变成n+1，输的时候变成n-1，所以p(n)=(p(n+1)+p(n-1))/2。当n=0的时候，即使不用赌，所有东西都输光了，所以p(0)=1。&lt;/p&gt;
+
+&lt;p&gt;所以，p可以看作一个满足下列递推关系的数列：&lt;/p&gt;
+
+&lt;p&gt;p(0)=1&lt;/p&gt;
+
+&lt;p&gt;p(n+1)=2p(n)-p(n-1)，也就是p(n+1)-p(n)=p(n)-p(n-1)&lt;/p&gt;
+
+&lt;p&gt;容易验证p(n)=n*p(1)-(n-1)正好符合上面的递推关系。因为p(n)&amp;gt;=0，所以对于任意的n，必定有p(1)&amp;gt;=1-1/n，所以p(1)=1，从而对于所有的n，p(n)=1。在无限次的赌博中，赌徒在某一次赌博中输光的概率是1。&lt;/p&gt;
+
+&lt;p&gt;赌徒的赌博轨迹，可以用所谓的马尔可夫链来描述。赌徒的财产作为状态，而每次赌局相当于在这些状态之间转移，赢钱时转移到钱多些的状态，输钱时转移到钱少些的状态。而破产的状态就像个陷阱，是跳不出的，因为已经没有赌本了。如果一条马尔可夫链有这样的“陷阱”状态，而每一个状态都有可能到达“陷阱”的话，在不断的转移中，总有一天会掉到“陷阱”里去。所谓“久赌必输”，其实说的就是这么一个道理。&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http://m3.img.srcdd.com/farm4/d/2012/1030/16/E9465BF86D4CE754925BD88FF2AF22FE_B500_900_500_440.JPEG&quot; alt=&quot;&quot; /&gt;
+&lt;/figure&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://toby-blog.com/math-new/&quot;&gt;俗语新解，用数学的眼光看世界&lt;/a&gt; was originally published by 懒熊toby at &lt;a href=&quot;http://toby-blog.com&quot;&gt;Geek的疯狂世界&lt;/a&gt; on December 25, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
