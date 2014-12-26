@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "二十几岁不会是人生最艰难的时候"
-description: "Adam Saltsman, 专访, 游戏大师"
+description: "二十岁，生活"
 tags: [随笔]
 ---
 
