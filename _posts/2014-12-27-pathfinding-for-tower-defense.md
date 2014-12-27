@@ -18,7 +18,7 @@ tags: [技术]
 单源，单目标:
 
 * [贪心搜索算法](http://en.wikipedia.org/wiki/Best_first_search)
-* [A<sub>*</sub>算法](http://en.wikipedia.org/wiki/A*_search_algorithm)-在游戏当中常用
+* [A算法](http://en.wikipedia.org/wiki/A*_search_algorithm)-在游戏当中常用
 
 单源多目标或多源单目标
 
