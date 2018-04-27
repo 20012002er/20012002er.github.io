@@ -424,6 +424,7 @@ eventCount 在初始化时，eventCount与poolIndex有关。总共32位，第一
 volatile long ctl;
 {% endhighlight %}
 
+{% highlight java %}
 * Field ctl is a long packed with:
      * AC: Number of active running workers minus target parallelism (16 bits)
      * TC: Number of total workers minus target parallelism (16 bits)
