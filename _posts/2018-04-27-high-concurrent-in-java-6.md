@@ -36,20 +36,20 @@ ThreadPoolExecutor是线程池的一个重要实现。
 public static ExecutorService newFixedThreadPool(int nThreads) {
         return new ThreadPoolExecutor(nThreads, nThreads,
                                       0L, TimeUnit.MILLISECONDS,
-                                      new LinkedBlockingQueue&lt;Runnable&gt;());
+                                      new LinkedBlockingQueue<Runnable>());
 }
 
 public static ExecutorService newSingleThreadExecutor() {
         return new FinalizableDelegatedExecutorService
             (new ThreadPoolExecutor(1, 1,
                                     0L, TimeUnit.MILLISECONDS,
-                                    new LinkedBlockingQueue&lt;Runnable&gt;()));
+                                    new LinkedBlockingQueue<Runnable>()));
 }
 
 public static ExecutorService newCachedThreadPool() {
         return new ThreadPoolExecutor(0, Integer.MAX_VALUE,
                                       60L, TimeUnit.SECONDS,
-                                      new SynchronousQueue&lt;Runnable&gt;());
+                                      new SynchronousQueue<Runnable>());
 }
 {% endhighlight %}
 
@@ -60,7 +60,7 @@ public ThreadPoolExecutor(int corePoolSize,
                               int maximumPoolSize,
                               long keepAliveTime,
                               TimeUnit unit,
-                              BlockingQueue&lt;Runnable&gt; workQueue) {
+                              BlockingQueue<Runnable> workQueue) {
         this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue,
              Executors.defaultThreadFactory(), defaultHandler);
 }
@@ -90,7 +90,7 @@ public class ThreadPoolDemo {
 	public static class MyTask implements Runnable {
 		@Override
 		public void run() {
-			System.out.println(System.currentTimeMillis() + &quot;Thread ID:&quot;
+			System.out.println(System.currentTimeMillis() + "Thread ID:"
 					+ Thread.currentThread().getId());
 			try {
 				Thread.sleep(1000);
@@ -103,7 +103,7 @@ public class ThreadPoolDemo {
 	public static void main(String[] args) {
 		MyTask myTask = new MyTask();
 		ExecutorService es = Executors.newFixedThreadPool(5);
-		for (int i = 0; i &lt; 10; i++) {
+		for (int i = 0; i < 10; i++) {
 			es.submit(myTask);
 		}
 	}
@@ -175,21 +175,21 @@ public class ThreadPoolDemo {
 
 {% highlight java %}
 ExecutorService es = new ThreadPoolExecutor(5, 5, 0L, TimeUnit.SECONDS,
-				new LinkedBlockingQueue&lt;Runnable&gt;()){
+				new LinkedBlockingQueue<Runnable>()){
 
 					@Override
 					protected void beforeExecute(Thread t, Runnable r) {
-						System.out.println(&quot;准备执行&quot;);
+						System.out.println("准备执行");
 					}
 
 					@Override
 					protected void afterExecute(Runnable r, Throwable t) {
-						System.out.println(&quot;执行完成&quot;);
+						System.out.println("执行完成");
 					}
 
 					@Override
 					protected void terminated() {
-						System.out.println(&quot;线程池退出&quot;);
+						System.out.println("线程池退出");
 					}
 
 		};
@@ -208,13 +208,13 @@ public ThreadPoolExecutor(int corePoolSize,
                               int maximumPoolSize,
                               long keepAliveTime,
                               TimeUnit unit,
-                              BlockingQueue&lt;Runnable&gt; workQueue,
+                              BlockingQueue<Runnable> workQueue,
                               ThreadFactory threadFactory,
                               RejectedExecutionHandler handler) {
-        if (corePoolSize &lt; 0 ||
-            maximumPoolSize &lt;= 0 ||
-            maximumPoolSize &lt; corePoolSize ||
-            keepAliveTime &lt; 0)
+        if (corePoolSize < 0 ||
+            maximumPoolSize <= 0 ||
+            maximumPoolSize < corePoolSize ||
+            keepAliveTime < 0)
             throw new IllegalArgumentException();
         if (workQueue == null || threadFactory == null || handler == null)
             throw new NullPointerException();
@@ -243,13 +243,13 @@ DiscardPolicy：如果不能接受任务了，则丢弃任务。
 
 {% highlight java %}
 ExecutorService es = new ThreadPoolExecutor(5, 5, 0L, TimeUnit.SECONDS,
-				new LinkedBlockingQueue&lt;Runnable&gt;(),
+				new LinkedBlockingQueue<Runnable>(),
 				new RejectedExecutionHandler() {
 
 					@Override
 					public void rejectedExecution(Runnable r,
 							ThreadPoolExecutor executor) {
-						System.out.println(r.toString() + &quot;is discard&quot;);
+						System.out.println(r.toString() + "is discard");
 					}
 				});
 {% endhighlight %}
@@ -275,9 +275,9 @@ static class DefaultThreadFactory implements ThreadFactory {
             SecurityManager s = System.getSecurityManager();
             group = (s != null) ? s.getThreadGroup() :
                                   Thread.currentThread().getThreadGroup();
-            namePrefix = &quot;pool-&quot; +
+            namePrefix = "pool-" +
                           poolNumber.getAndIncrement() +
-                         &quot;-thread-&quot;;
+                         "-thread-";
         }
 
         public Thread newThread(Runnable r) {
@@ -315,7 +315,7 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveTask;
 
-public class CountTask extends RecursiveTask&lt;Long&gt;{
+public class CountTask extends RecursiveTask<Long>{
 
 	private static final int THRESHOLD = 10000;
 	private long start;
@@ -330,21 +330,21 @@ public class CountTask extends RecursiveTask&lt;Long&gt;{
 	@Override
 	protected Long compute() {
 		long sum = 0;
-		boolean canCompute = (end - start) &lt; THRESHOLD;
+		boolean canCompute = (end - start) < THRESHOLD;
 		if(canCompute)
 		{
-			for (long i = start; i &lt;= end; i++) {
+			for (long i = start; i <= end; i++) {
 				sum = sum + i;
 			}
 		}else
 		{
 			//分成100个小任务
 			long step = (start + end)/100;
-			ArrayList&lt;CountTask&gt; subTasks = new ArrayList&lt;CountTask&gt;();
+			ArrayList<CountTask> subTasks = new ArrayList<CountTask>();
 			long pos = start;
-			for (int i = 0; i &lt; 100; i++) {
+			for (int i = 0; i < 100; i++) {
 				long lastOne = pos + step;
-				if(lastOne &gt; end )
+				if(lastOne > end )
 				{
 					lastOne = end;
 				}
@@ -363,10 +363,10 @@ public class CountTask extends RecursiveTask&lt;Long&gt;{
 	public static void main(String[] args) {
 		ForkJoinPool forkJoinPool = new ForkJoinPool();
 		CountTask task = new CountTask(0, 200000L);
-		ForkJoinTask&lt;Long&gt; result = forkJoinPool.submit(task);
+		ForkJoinTask<Long> result = forkJoinPool.submit(task);
 		try {
 			long res = result.get();
-			System.out.println(&quot;sum = &quot; + res);
+			System.out.println("sum = " + res);
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -391,21 +391,21 @@ static final class WorkQueue
 在工作队列中，会有一系列对线程进行管理的字段
 
 {% highlight java %}
-volatile int eventCount;   // encoded inactivation count; &lt; 0 if inactive
+volatile int eventCount;   // encoded inactivation count; < 0 if inactive
         int nextWait;              // encoded record of next event waiter
         int nsteals;               // number of steals
         int hint;                  // steal index hint
         short poolIndex;           // index of this queue in pool
-        final short mode;          // 0: lifo, &gt; 0: fifo, &lt; 0: shared
+        final short mode;          // 0: lifo, > 0: fifo, < 0: shared
         volatile int qlock;        // 1: locked, -1: terminate; else 0
         volatile int base;         // index of next slot for poll
         int top;                   // index of next slot for push
-        ForkJoinTask&lt;?&gt;[] array;   // the elements (initially unallocated)
+        ForkJoinTask<?>[] array;   // the elements (initially unallocated)
         final ForkJoinPool pool;   // the containing pool (may be null)
         final ForkJoinWorkerThread owner; // owning thread or null if shared
         volatile Thread parker;    // == owner during call to park; else null
-        volatile ForkJoinTask&lt;?&gt; currentJoin;  // task being joined in awaitJoin
-        ForkJoinTask&lt;?&gt; currentSteal; // current non-local task being executed
+        volatile ForkJoinTask<?> currentJoin;  // task being joined in awaitJoin
+        ForkJoinTask<?> currentSteal; // current non-local task being executed
 {% endhighlight %}
 
 这里要注意的是，JDK7和JDK8在ForkJoin的实现上有了很大的差别。我们这里介绍的是JDK8中的。 在线程池中，有时不是所有的线程都在执行的，部分线程会被挂起，那些挂起的线程会被存放到一个栈中。内部通过一个链表表示。
@@ -416,7 +416,7 @@ poolIndex线程在线程池中的下标索引。
 
 eventCount 在初始化时，eventCount与poolIndex有关。总共32位，第一位表示是否被激活，15位表示被挂起的次数eventCount，剩下的表示poolIndex。用一个字段来表示多个意思。
 
-工作队列WorkQueue用ForkJoinTask&lt;?&gt;[] array来表示。而top，base来表示队列的两端，数据在这两者之间。
+工作队列WorkQueue用ForkJoinTask<?>[] array来表示。而top，base来表示队列的两端，数据在这两者之间。
 
 在ForkJoinPool中维护着ctl（64位long型）
 
@@ -467,7 +467,7 @@ ID表示顶端等待线程的poolIndex
 final void runWorker(WorkQueue w) {
         w.growArray(); // allocate queue
         for (int r = w.hint; scan(w, r) == 0; ) {
-            r ^= r &lt;&lt; 13; r ^= r &gt;&gt;&gt; 17; r ^= r &lt;&lt; 5; // xorshift
+            r ^= r << 13; r ^= r >>> 17; r ^= r << 5; // xorshift
         }
     }
 {% endhighlight %}
@@ -480,31 +480,31 @@ r是一个相对随机的数字。
 private final int scan(WorkQueue w, int r) {
         WorkQueue[] ws; int m;
         long c = ctl;                            // for consistency check
-        if ((ws = workQueues) != null &amp;&amp; (m = ws.length - 1) &gt;= 0 &amp;&amp; w != null) {
+        if ((ws = workQueues) != null && (m = ws.length - 1) >= 0 && w != null) {
             for (int j = m + m + 1, ec = w.eventCount;;) {
-                WorkQueue q; int b, e; ForkJoinTask&lt;?&gt;[] a; ForkJoinTask&lt;?&gt; t;
-                if ((q = ws[(r - j) &amp; m]) != null &amp;&amp;
-                    (b = q.base) - q.top &lt; 0 &amp;&amp; (a = q.array) != null) {
-                    long i = (((a.length - 1) &amp; b) &lt;&lt; ASHIFT) + ABASE;
-                    if ((t = ((ForkJoinTask&lt;?&gt;)
+                WorkQueue q; int b, e; ForkJoinTask<?>[] a; ForkJoinTask<?> t;
+                if ((q = ws[(r - j) & m]) != null &&
+                    (b = q.base) - q.top < 0 && (a = q.array) != null) {
+                    long i = (((a.length - 1) & b) << ASHIFT) + ABASE;
+                    if ((t = ((ForkJoinTask<?>)
                               U.getObjectVolatile(a, i))) != null) {
-                        if (ec &lt; 0)
+                        if (ec < 0)
                             helpRelease(c, ws, w, q, b);
-                        else if (q.base == b &amp;&amp;
+                        else if (q.base == b &&
                                  U.compareAndSwapObject(a, i, t, null)) {
                             U.putOrderedInt(q, QBASE, b + 1);
-                            if ((b + 1) - q.top &lt; 0)
+                            if ((b + 1) - q.top < 0)
                                 signalWork(ws, q);
                             w.runTask(t);
                         }
                     }
                     break;
                 }
-                else if (--j &lt; 0) {
-                    if ((ec | (e = (int)c)) &lt; 0) // inactive or terminating
+                else if (--j < 0) {
+                    if ((ec | (e = (int)c)) < 0) // inactive or terminating
                         return awaitWork(w, c, ec);
                     else if (ctl == c) {         // try to inactivate and enqueue
-                        long nc = (long)ec | ((c - AC_UNIT) &amp; (AC_MASK|TC_MASK));
+                        long nc = (long)ec | ((c - AC_UNIT) & (AC_MASK|TC_MASK));
                         w.nextWait = e;
                         w.eventCount = ec | INT_SIGN;
                         if (!U.compareAndSwapLong(this, CTL, c, nc))
@@ -525,14 +525,14 @@ private final int scan(WorkQueue w, int r) {
 {% highlight java %}
 b = q.base
 ..
-long i = (((a.length - 1) &amp; b) &lt;&lt; ASHIFT) + ABASE;
+long i = (((a.length - 1) & b) << ASHIFT) + ABASE;
 ..
 {% endhighlight %}
 
 然后通过偏移量得到最后一个的任务，运行这个任务
 
 {% highlight java %}
-t = ((ForkJoinTask&lt;?&gt;)U.getObjectVolatile(a, i))
+t = ((ForkJoinTask<?>)U.getObjectVolatile(a, i))
 ..
 w.runTask(t);
 ..
@@ -545,11 +545,11 @@ w.runTask(t);
 然后来看看runTask方法
 
 {% highlight java %}
-final void runTask(ForkJoinTask&lt;?&gt; task) {
+final void runTask(ForkJoinTask<?> task) {
             if ((currentSteal = task) != null) {
                 ForkJoinWorkerThread thread;
                 task.doExec();
-                ForkJoinTask&lt;?&gt;[] a = array;
+                ForkJoinTask<?>[] a = array;
                 int md = mode;
                 ++nsteals;
                 currentSteal = null;
@@ -557,10 +557,10 @@ final void runTask(ForkJoinTask&lt;?&gt; task) {
                     pollAndExecAll();
                 else if (a != null) {
                     int s, m = a.length - 1;
-                    ForkJoinTask&lt;?&gt; t;
-                    while ((s = top - 1) - base &gt;= 0 &amp;&amp;
-                           (t = (ForkJoinTask&lt;?&gt;)U.getAndSetObject
-                            (a, ((m &amp; s) &lt;&lt; ASHIFT) + ABASE, null)) != null) {
+                    ForkJoinTask<?> t;
+                    while ((s = top - 1) - base >= 0 &&
+                           (t = (ForkJoinTask<?>)U.getAndSetObject
+                            (a, ((m & s) << ASHIFT) + ABASE, null)) != null) {
                         top = s;
                         t.doExec();
                     }
@@ -584,7 +584,7 @@ task.doExec();
 通过得到top来获得自己任务第一个任务
 
 {% highlight java %}
-while ((s = top - 1) - base &gt;= 0 &amp;&amp; (t = (ForkJoinTask&lt;?&gt;)U.getAndSetObject(a, ((m &amp; s) &lt;&lt; ASHIFT) + ABASE, null)) != null)
+while ((s = top - 1) - base >= 0 && (t = (ForkJoinTask<?>)U.getAndSetObject(a, ((m & s) << ASHIFT) + ABASE, null)) != null)
 {
        top = s;
        t.doExec();
@@ -600,11 +600,11 @@ while ((s = top - 1) - base &gt;= 0 &amp;&amp; (t = (ForkJoinTask&lt;?&gt;)U.get
 如果没有找到其他任务
 
 {% highlight java %}
-else if (--j &lt; 0) {
-                    if ((ec | (e = (int)c)) &lt; 0) // inactive or terminating
+else if (--j < 0) {
+                    if ((ec | (e = (int)c)) < 0) // inactive or terminating
                         return awaitWork(w, c, ec);
                     else if (ctl == c) {         // try to inactivate and enqueue
-                        long nc = (long)ec | ((c - AC_UNIT) &amp; (AC_MASK|TC_MASK));
+                        long nc = (long)ec | ((c - AC_UNIT) & (AC_MASK|TC_MASK));
                         w.nextWait = e;
                         w.eventCount = ec | INT_SIGN;
                         if (!U.compareAndSwapLong(this, CTL, c, nc))
