@@ -4,82 +4,71 @@
     <meta charset="utf-8">
     <title>蛋蛋高考倒计时</title>
 </head>
-<body onload="show_date_time()" class="bodystyle">
-        <div class="main">
-            <h1>蛋蛋</h1>
-            <h1>距离高考还有</h1>
-            <h3 id=span_dt_dt></h3>
-               <script language=javascript>
-					function show_date_time(){
-					window.setTimeout("show_date_time()", 1000);
-					var xDate = new Date();
-                    xDate.setFullYear(2034, 7, 7);
-					var xmonth = xDate.getMonth();
-					var xday = xDate.getDate();
-					if(xmonth>'6'){
-						var xxyear = xDate.getFullYear()+1;
-					}
-					if(xmonth='6'){
-						if(xday>='7'){
-							var xxyear = xDate.getFullYear()+1;
-						}
-						if(xday<'7'){
-							var xxyear = xDate.getFullYear();
-						}
-					}
-					if(xmonth<'6'){
-						var xxyear = xDate.getFullYear();
-					}
-					BirthDay=new Date("06/07/"+xxyear+" 00:00:00");
-					today=new Date();
-					timeold=(BirthDay.getTime()-today.getTime());
-					sectimeold=timeold/1000
-					secondsold=Math.floor(sectimeold);
-					msPerDay=24*60*60*1000
-					e_daysold=timeold/msPerDay
-					daysold=Math.floor(e_daysold);
-					e_hrsold=(e_daysold-daysold)*24;
-					hrsold=Math.floor(e_hrsold);
-					e_minsold=(e_hrsold-hrsold)*60;
-					minsold=Math.floor((e_hrsold-hrsold)*60);
-					seconds=Math.floor((e_minsold-minsold)*60);
-					span_dt_dt.innerHTML="<font color='red'>"+daysold+"</font> 天 <font color='red'>"+hrsold+"</font> 小时 <font color='red'>"+minsold+"</font> 分 <font color='red'>"+seconds+"</font> 秒";
-					}
-				</script>
+<style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+            background-image: url('http://wx2.sinaimg.cn/large/5127613dly1fin2sqd6gfj219s0wddhz.jpg');
+            font-size: 85%;
+            margin: 0;
+        }
+        h1 {
+            font-size: 300%;
+            font-weight: 400;
+        }
+        .content {
+            position: absolute;
+            width: 100%;
+            top: 40%;
+            transform: translate(0, -50%);
+            text-align: center;
+        }
+        .timer {
+            font-size: 180%;
+            line-height: 1.5;
+            margin: 1em 0;
+        }
+        .timer b {
+            color: red;
+        }
+        .browsehappy {
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+            position: relative;
+            top: 49%
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+    <p class="browsehappy">
+      你正在使用一个<strong>过时</strong>的浏览器。请<a class="link" href="http://browsehappy.com" target="_blank">升级你的浏览器</a>以查看网页。</p>
+    </p>
+    <![endif]-->
+
+    <div class="content">
+        <h1>蛋蛋</h1>
+        <h1>距离高考还有</h1>
+        <div class="timer">
+            <b id="d"></b> 天 <b id="h"></b> 时 <b id="m"></b> 分 <b id="s"></b> 秒
         </div>
+    </div>
 
-        <style>
-        .main{
-    text-align: center;
-    width: 300px;
-    height: 350px;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-.main h1{
-    color: #fff;
-    text-shadow: 1px 1px 4px rgba(34,34,34,0.6);
-}
-.main h3{
-    color: #fff;
-    text-shadow: 1px 1px 4px rgba(34,34,34,0.6);
-}
-.bodystyle{
-background-image: url(images/dandan_back2.jpg);   
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
-background-attachment: fixed;
-}
-.bodystyle::after{
-    background-color: rgba(99, 97, 97, 0.3);
-}
-        </style>
-
+    <script>
+        function timer() {
+            var now = new Date();
+            var endTime = new Date(2034, 5, 7, 9);
+            var t = endTime - now;
+            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+            document.getElementById('h').innerHTML = ~~(t / 1000 / 60 / 60 % 24);
+            document.getElementById('m').innerHTML = ~~(t / 1000 / 60 % 60);
+            document.getElementById('s').innerHTML = ~~(t / 1000 % 60);
+            setTimeout(timer, 1000);
+        }
+        timer();
+    </script>
 </body>
 
 </html>
