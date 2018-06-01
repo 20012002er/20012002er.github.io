@@ -5,9 +5,10 @@
     <title>蛋蛋高考倒计时</title>
 </head>
 <body onload="show_date_time()">
-        <div class="text-vertical-center">
+        <div class="main">
+            <h3>蛋蛋</h3>
             <h3>距离高考还有</h3>
-            <SPAN id=span_dt_dt></SPAN>
+            <h3 id=span_dt_dt></h3>
                <script language=javascript>
 					function show_date_time(){
 					window.setTimeout("show_date_time()", 1000);
@@ -42,11 +43,24 @@
 					e_minsold=(e_hrsold-hrsold)*60;
 					minsold=Math.floor((e_hrsold-hrsold)*60);
 					seconds=Math.floor((e_minsold-minsold)*60);
-					span_dt_dt.innerHTML="<h3><font color='red'>"+daysold+"</font> 天 <font color='red'>"+hrsold+"</font> 小时 <font color='red'>"+minsold+"</font> 分 <font color='red'>"+seconds+"</font> 秒 "+"</h3>" ;
+					span_dt_dt.innerHTML="<font color='red'>"+daysold+"</font> 天 <font color='red'>"+hrsold+"</font> 小时 <font color='red'>"+minsold+"</font> 分 <font color='red'>"+seconds+"</font> 秒";
 					}
 				</script>
-            <br>
         </div>
+
+        <style>
+        .main{
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+        </style>
 
 </body>
 
