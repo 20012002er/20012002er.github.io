@@ -1,1 +1,54 @@
-dandan
+<!DOCTYPE html>
+<html lang=zh-cn>
+<head>
+    <meta charset="utf-8">
+    <title>蛋蛋高考倒计时</title>
+</head>
+<body onload="show_date_time()">
+        <div class="text-vertical-center">
+            距离高考
+               <script language=javascript>
+					function show_date_time(){
+					window.setTimeout("show_date_time()", 1000);
+					var xDate = new Date();
+                    xDate.setFullYear(2034, 7, 7);
+					var xmonth = xDate.getMonth();
+					var xday = xDate.getDate();
+					if(xmonth>'6'){
+						var xxyear = xDate.getFullYear()+1;
+					}
+					if(xmonth='6'){
+						if(xday>='7'){
+							var xxyear = xDate.getFullYear()+1;
+						}
+						if(xday<'7'){
+							var xxyear = xDate.getFullYear();
+						}
+					}
+					if(xmonth<'6'){
+						var xxyear = xDate.getFullYear();
+					}
+					BirthDay=new Date("06/07/"+xxyear+" 00:00:00");
+					today=new Date();
+					timeold=(BirthDay.getTime()-today.getTime());
+					sectimeold=timeold/1000
+					secondsold=Math.floor(sectimeold);
+					msPerDay=24*60*60*1000
+					e_daysold=timeold/msPerDay
+					daysold=Math.floor(e_daysold);
+					e_hrsold=(e_daysold-daysold)*24;
+					hrsold=Math.floor(e_hrsold);
+					e_minsold=(e_hrsold-hrsold)*60;
+					minsold=Math.floor((e_hrsold-hrsold)*60);
+					seconds=Math.floor((e_minsold-minsold)*60);
+					span_dt_dt.innerHTML="<align=center><p><font color=#000000><p><font face=微软雅黑><p><font  size=4em  >还有 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒 "+"<br></font><br></font>" ;
+					}
+				</script>
+            <br>
+        </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</body>
+
+</html>
