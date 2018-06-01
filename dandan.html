@@ -6,7 +6,7 @@
 </head>
 <body onload="show_date_time()">
         <div class="text-vertical-center">
-            距离高考
+            <h3>距离高考还有</h3>
             <SPAN id=span_dt_dt></SPAN>
                <script language=javascript>
 					function show_date_time(){
@@ -42,13 +42,11 @@
 					e_minsold=(e_hrsold-hrsold)*60;
 					minsold=Math.floor((e_hrsold-hrsold)*60);
 					seconds=Math.floor((e_minsold-minsold)*60);
-					span_dt_dt.innerHTML="<align=center><p><font color=#000000><p><font face=微软雅黑><p><font  size=4em  >还有 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒 "+"<br></font><br></font>" ;
+					span_dt_dt.innerHTML="<align=center><p><font color=#000000><p><font face=微软雅黑><p><font  size=4em  >"+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒 "+"<br></font><br></font>" ;
 					}
 				</script>
             <br>
         </div>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 </body>
 
