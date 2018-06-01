@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title>蛋蛋高考倒计时</title>
 </head>
-<body onload="show_date_time()">
+<body onload="show_date_time()" class="bodystyle">
         <div class="main">
-            <h3>蛋蛋</h3>
-            <h3>距离高考还有</h3>
+            <h1>蛋蛋</h1>
+            <h1>距离高考还有</h1>
             <h3 id=span_dt_dt></h3>
                <script language=javascript>
 					function show_date_time(){
@@ -59,6 +59,16 @@
     left: 0;
     right: 0;
     bottom: 0;
+}
+.bodystyle{
+    filter:alpha(opacity=50);    
+-moz-opacity:0.5;    
+-khtml-opacity: 0.5;    
+opacity: 0.5;  
+width:100%;  
+position:absolute;  
+background:url(images/dandan_back.jpg) ;   
+background-attachment:fixed;  
 }
         </style>
 
