@@ -1,4 +1,9 @@
-### Spring注解总结
+---
+layout: post
+title: "Spring注解总结"
+description: "Spring注解总结"
+tags: [开发]
+---
 
 ### 1. `@SpringBootApplication`
 
