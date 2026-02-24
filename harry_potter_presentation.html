@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哈利·波特与魔法石 - 乔布斯风格演示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            overflow: hidden;
+            cursor: none;
+        }
+
+        .presentation {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .slide-title {
+            font-size: 120px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            letter-spacing: -3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .slide-subtitle {
+            font-size: 48px;
+            font-weight: 300;
+            text-align: center;
+            color: #888;
+            margin-top: 20px;
+        }
+
+        .slide-text {
+            font-size: 64px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.3;
+            max-width: 1200px;
+        }
+
+        .slide-icon {
+            font-size: 200px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .slide-number {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .slide-counter {
+            position: fixed;
+            bottom: 50px;
+            left: 60px;
+            font-size: 20px;
+            color: #666;
+        }
+
+        /* Slide-specific styles */
+        .slide-1 .slide-title {
+            font-size: 96px;
+        }
+
+        .slide-2 .slide-icon,
+        .slide-3 .slide-icon,
+        .slide-4 .slide-icon,
+        .slide-7 .slide-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .highlight {
+            color: #ffd700;
+        }
+
+        .slide-9 .slide-text {
+            font-size: 48px;
+        }
+
+        .slide-9 .point {
+            margin: 30px 0;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.6s ease;
+        }
+
+        .slide-9.active .point {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-9 .point:nth-child(1) { transition-delay: 0.3s; }
+        .slide-9 .point:nth-child(2) { transition-delay: 0.6s; }
+        .slide-9 .point:nth-child(3) { transition-delay: 0.9s; }
+
+        /* Custom cursor for navigation hint */
+        body::after {
+            content: "→ 按键盘左右键或点击按钮切换幻灯片";
+            position: fixed;
+            top: 30px;
+            right: 40px;
+            font-size: 14px;
+            color: #444;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        body:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+        <!-- Slide 1: Title -->
+        <div class="slide slide-1 active" data-slide="1">
+            <div class="slide-title">哈利·波特<br>与魔法石</div>
+            <div class="slide-subtitle">一个男孩的魔法冒险</div>
+            <div class="slide-number">1</div>
+        </div>
+
+        <!-- Slide 2: The Boy -->
+        <div class="slide slide-2" data-slide="2">
+            <div class="slide-icon">👦</div>
+            <div class="slide-text">
+                住在楼梯下的小房间<br>
+                没人关心的男孩
+            </div>
+            <div class="slide-number">2</div>
+        </div>
+
+        <!-- Slide 3: The Letter -->
+        <div class="slide slide-3" data-slide="3">
+            <div class="slide-icon">🦉</div>
+            <div class="slide-text">
+                成百上千只猫头鹰<br>
+                带来<span class="highlight">霍格沃茨</span>录取通知书
+            </div>
+            <div class="slide-number">3</div>
+        </div>
+
+        <!-- Slide 4: The Magic World -->
+        <div class="slide slide-4" data-slide="4">
+            <div class="slide-icon">🪄</div>
+            <div class="slide-text">
+                对角巷<br>
+                魔杖 · 长袍 · 海德薇
+            </div>
+            <div class="slide-number">4</div>
+        </div>
+
+        <!-- Slide 5: Sorting Hat -->
+        <div class="slide slide-5" data-slide="5">
+            <div class="slide-text" style="font-size: 90px; color: #ffd700;">
+                "格兰芬多！"
+            </div>
+            <div class="slide-subtitle" style="margin-top: 60px;">
+                分院帽的选择
+            </div>
+            <div class="slide-number">5</div>
+        </div>
+
+        <!-- Slide 6: Friends -->
+        <div class="slide slide-6" data-slide="6">
+            <div class="slide-text">
+                罗恩 · 赫敏 · 哈利
+            </div>
+            <div class="slide-subtitle" style="margin-top: 40px; font-size: 36px;">
+                最好的朋友<br>最棒的团队
+            </div>
+            <div class="slide-number">6</div>
+        </div>
+
+        <!-- Slide 7: The Adventure -->
+        <div class="slide slide-7" data-slide="7">
+            <div class="slide-icon">🐕</div>
+            <div class="slide-text">
+                三楼走廊<br>
+                三头犬<span class="highlight">路威</span><br>
+                守护着魔法石
+            </div>
+            <div class="slide-number">7</div>
+        </div>
+
+        <!-- Slide 8: The Power of Love -->
+        <div class="slide slide-8" data-slide="8">
+            <div class="slide-text" style="font-size: 56px;">
+                当伏地魔伸手抓哈利<br><br>
+                <span class="highlight" style="font-size: 72px;">他碰不到他</span>
+            </div>
+            <div class="slide-subtitle" style="margin-top: 50px;">
+                妈妈留下的保护咒<br>
+                最强大的魔法
+            </div>
+            <div class="slide-number">8</div>
+        </div>
+
+        <!-- Slide 9: The Message -->
+        <div class="slide slide-9" data-slide="9">
+            <div class="slide-text" style="margin-bottom: 80px;">这个故事告诉我们</div>
+            <div class="point" style="font-size: 52px;">🤝 友谊很重要</div>
+            <div class="point" style="font-size: 52px;">⚔️ 勇气战胜邪恶</div>
+            <div class="point" style="font-size: 52px;">💖 爱是最强大的魔法</div>
+            <div class="slide-number">9</div>
+        </div>
+
+        <!-- Slide 10: Victory -->
+        <div class="slide slide-10" data-slide="10">
+            <div class="slide-icon">🏆</div>
+            <div class="slide-text" style="color: #ffd700; font-size: 90px;">
+                格兰芬多获胜！
+            </div>
+            <div class="slide-subtitle" style="margin-top: 60px; font-size: 42px; color: #fff;">
+                谢谢大家
+            </div>
+            <div class="slide-number">10</div>
+        </div>
+    </div>
+
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="slide-counter"><span id="currentSlide">1</span> / 10</div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn">← 上一页</button>
+        <button class="nav-btn" id="nextBtn">下一页 →</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 10;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            
+            if (n > totalSlides) currentSlide = 1;
+            if (n < 1) currentSlide = totalSlides;
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            document.querySelector(`[data-slide="${currentSlide}"]`).classList.add('active');
+            
+            // Update progress bar
+            const progress = (currentSlide / totalSlides) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            
+            // Update counter
+            document.getElementById('currentSlide').textContent = currentSlide;
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        // Navigation buttons
+        document.getElementById('nextBtn').addEventListener('click', nextSlide);
+        document.getElementById('prevBtn').addEventListener('click', prevSlide);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (e.key === 'Home') {
+                currentSlide = 1;
+                showSlide(currentSlide);
+            } else if (e.key === 'End') {
+                currentSlide = totalSlides;
+                showSlide(currentSlide);
+            }
+        });
+
+        // Touch/swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) nextSlide();
+            if (touchEndX > touchStartX + 50) prevSlide();
+        }
+
+        // Initialize
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

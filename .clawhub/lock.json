@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "skills": {
+    "ppt-generator": {
+      "version": "1.0.0",
+      "installedAt": 1770863529265
+    },
+    "notion-api-skill": {
+      "version": "1.0.5",
+      "installedAt": 1770864042076
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1771066100260
+    },
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1771072690995
+    }
+  }
+}
