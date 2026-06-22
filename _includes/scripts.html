@@ -1,0 +1,35 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Subtle typing effect for hero title
+  const hero = document.querySelector('.hero-glitch');
+  if (hero) {
+    hero.addEventListener('mouseenter', () => hero.classList.add('glitch-active'));
+    hero.addEventListener('mouseleave', () => hero.classList.remove('glitch-active'));
+  }
+
+  // Smooth scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.post-card').forEach(card => observer.observe(card));
+
+  // Post body code block copy button
+  document.querySelectorAll('pre').forEach(block => {
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'Copy';
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.textContent.replace('Copy', '').trim());
+      btn.textContent = 'Copied!';
+      setTimeout(() => btn.textContent = 'Copy', 2000);
+    });
+    block.style.position = 'relative';
+    block.appendChild(btn);
+  });
+});
+</script>
