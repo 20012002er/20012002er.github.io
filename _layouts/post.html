@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<div class="reading-progress" id="readingProgress"></div>
 <article class="post">
   <header class="post-header">
     <div class="post-meta">
@@ -22,10 +23,16 @@ layout: default
     </div>
     {% endif %}
   </header>
+  {% if page.cover %}
+  <div class="post-cover">
+    <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}" loading="lazy">
+  </div>
+  {% endif %}
   <div class="post-body">
     {{ content }}
   </div>
   <footer class="post-footer">
     <a href="/" class="back-link">← 返回首页</a>
+    <span class="share-label">{{ page.date | date: "%Y" }} · Toby's Blog</span>
   </footer>
 </article>
