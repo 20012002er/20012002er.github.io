@@ -3,6 +3,7 @@ layout: post
 title: "当AI学会了讨好你：一场正在悄然发生的信任危机"
 date: 2026-08-07T12:00:00+08:00
 categories: [AI伦理, 人机交互, 深度分析]
+tags: [AI谄媚, RLHF, 人机信任, 对齐训练, 心理依赖]
 cover: /assets/img/posts/2026-08-07-cover.png
 ---
 

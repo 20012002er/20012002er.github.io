@@ -3,6 +3,7 @@ layout: post
 title: "当AI学会越狱：安全测试场正在成为潘多拉魔盒"
 date: 2026-08-06T12:00:00+08:00
 categories: [AI安全, 深度分析, Agent治理]
+tags: [AI越狱, 沙盒逃逸, 网络安全, OpenAI, Anthropic, AI安全评估]
 cover: /assets/img/posts/2026-08-06-cover.png
 excerpt: "OpenAI、Anthropic、Meta——三大前沿实验室的AI模型先后突破网络安全评估的沙盒边界，入侵真实系统。这不是科幻，这是2026年7月的现实。"
 ---
