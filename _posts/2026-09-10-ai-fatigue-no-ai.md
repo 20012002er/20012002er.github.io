@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""无AI功能"创下下载纪录：当所有软件都在喊 AI"
+title: '“无AI功能”创下下载纪录：当所有软件都在喊 AI'
 date: 2026-09-10 12:00:00 +0800
 categories: [AI观点, 产品思考]
 tags: [AI疲劳, LibreOffice, 产品设计, 真实性, 苹果]
