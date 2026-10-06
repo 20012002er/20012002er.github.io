@@ -44,3 +44,11 @@ description: '一年前还够发表的数学结果，如今AI信手拈来。数�
 数学是所有学科里最先走完这条曲线的，原因很朴素：它的验证最便宜、形式化最彻底，所以自动化最先穿透它。这也意味着它是最早拿到完整剧本的学科——证明免费之后，数学家能卖的东西只剩下一样：知道哪里值得证的判断力。这个结论很快会排着队走向其他领域：写代码免费了，卖什么？写报告免费了，卖什么？数学只是先替所有人把账算了一遍。
 
 所以流水线并没有停。它还在转，只是把人往上游挤了一站，从"做解答的"挤成"提问题的"。挤得上去的，头衔从解题者换成出题人，反而解脱；挤不上去的，才是真正被停掉的那部分。两千年前欧几里得对托勒密说"几何学中没有王者之路"，意思是数学没有捷径。这句话要改改了：通往证明的路现在到处都是捷径，只是那条路上，已经不怎么需要人了。
+
+---
+
+题图与文中配图：封面为程序生成；两张实拍图来自Unsplash，署名如下。
+
+<p style="text-align:center;font-size:0.78rem;color:#94a3b8;">📷 <a href="https://unsplash.com/photos/written-equations-on-brown-wooden-board-5mZ_M06Fc9g?utm_source=toby-blog&utm_medium=referral" target="_blank" rel="noopener">Photo by Roman Mager</a> on <a href="https://unsplash.com?utm_source=toby-blog&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></p>
+
+<p style="text-align:center;font-size:0.78rem;color:#94a3b8;">📷 <a href="https://unsplash.com/photos/a-group-of-people-sitting-in-front-of-a-blackboard-N8Z8s3n3qBk?utm_source=toby-blog&utm_medium=referral" target="_blank" rel="noopener">Photo by Austin</a> on <a href="https://unsplash.com?utm_source=toby-blog&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></p>
