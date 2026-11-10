@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Agent终于开始学会做梦'
-date: 2026-11-10 12:00:00 +0800
+date: 2026-11-10 10:26:00 +0800
 categories: [AI观点]
 tags: [Agent记忆, Anthropic, dreaming机制, Control Room, 智能体安全, 上下文窗口]
 author: toby
