@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'AI最大的尾部风险，是一个人的五五开'
-date: 2026-11-10 12:05:00 +0800
+date: 2026-11-10 12:11:30 +0800
 categories: [AI观点]
 tags: [英伟达, 黄仁勋, 公司治理, 系统性风险, 集体诉讼, AI投资]
 author: toby
