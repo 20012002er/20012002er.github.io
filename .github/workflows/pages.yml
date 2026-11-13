@@ -46,6 +46,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Submit changed URLs to IndexNow (Bing/Yandex)
+        run: python3 scripts/indexnow.py --days 3 || true
