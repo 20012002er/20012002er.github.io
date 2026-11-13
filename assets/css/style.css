@@ -567,6 +567,7 @@ a:hover { color: var(--accent-bright); }
 /* — Post cover image — */
 .post-cover {
   width: 100%;
+  aspect-ratio: 16 / 9;
   border-radius: var(--radius-lg);
   margin: 0 0 40px;
   border: 1px solid var(--border);
