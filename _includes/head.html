@@ -1,7 +1,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{%- comment -%} jekyll-seo-tag 统一输出 title / description / canonical / og / twitter；JSON-LD 由本文件与 post.html 自行输出，避免重复 {%- endcomment -%}
-{% seo json_ld=false %}
+{%- comment -%} jekyll-seo-tag 输出 title/description/canonical/og/twitter；其 JSON-LD 位于尾部，用 capture+split 剥掉，改由本站自定义结构化数据 {%- endcomment -%}
+{% capture seo_output %}{% seo %}{% endcapture %}
+{% assign seo_parts = seo_output | split: '<script type="application/ld+json">' %}
+{{ seo_parts[0] }}
 {% if page.noindex or page.sitemap == false %}
 <meta name="robots" content="noindex, follow">
 {% else %}
