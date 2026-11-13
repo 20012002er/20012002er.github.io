@@ -1056,3 +1056,21 @@ a:hover { color: var(--accent-bright); }
   .post-card { opacity: 1; transform: none; }
   .hero-eyebrow, .hero-glitch, .hero-sub, .hero-line { opacity: 1; }
 }
+
+/* ========== SEO 增强：标签链接 / 上下篇 / 相关文章 ========== */
+a.tag { text-decoration: none; }
+a.category-tag { text-decoration: none; }
+.post-prevnext {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px;
+}
+.post-prevnext .page-btn { font-size: 0.82rem; max-width: 46%; }
+.related-posts { margin: 56px auto 24px; max-width: 1000px; padding: 0 22px; }
+.related-title {
+  font-family: 'Sora', 'Noto Sans SC', sans-serif;
+  font-size: 1.02rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #00e5cc; margin-bottom: 22px;
+}
+.related-posts .post-card-title { font-size: 1.02rem; }
+@media (max-width: 700px) {
+  .post-prevnext .page-btn { max-width: 100%; }
+}

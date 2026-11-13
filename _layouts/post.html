@@ -32,10 +32,47 @@ layout: default
     {{ content }}
   </div>
   <footer class="post-footer">
+    <nav class="post-prevnext">
+      {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}" class="page-btn">← {{ page.previous.title | truncate: 24 }}</a>
+      {% endif %}
+      {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}" class="page-btn">{{ page.next.title | truncate: 24 }} →</a>
+      {% endif %}
+    </nav>
     <a href="/" class="back-link">← 返回首页</a>
     <span class="share-label">{{ page.date | date: "%Y" }} · Toby's Blog</span>
   </footer>
 </article>
+
+{%- comment -%} 相关文章：按共同标签取 3 篇，增强内链 {%- endcomment -%}
+{% if page.tags.size > 0 %}
+{% assign rel_count = 0 %}
+<section class="related-posts">
+  <h2 class="related-title">相关文章</h2>
+  <div class="posts-list">
+    {% for p in site.posts %}
+      {% if rel_count >= 3 %}{% break %}{% endif %}
+      {% if p.url == page.url %}{% continue %}{% endif %}
+      {% assign shared = 0 %}
+      {% for t in p.tags %}
+        {% if page.tags contains t %}{% assign shared = shared | plus: 1 %}{% endif %}
+      {% endfor %}
+      {% if shared > 0 %}
+      <article class="post-card">
+        <a href="{{ p.url | relative_url }}" class="post-card-link">
+          <div class="post-card-date">{{ p.date | date: "%Y-%m-%d" }}</div>
+          <h3 class="post-card-title">{{ p.title }}</h3>
+          <p class="post-card-excerpt">{{ p.description | default: p.excerpt | strip_html | truncate: 100 }}</p>
+          <div class="post-card-read">READ MORE →</div>
+        </a>
+      </article>
+      {% assign rel_count = rel_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
 {%- assign post_desc = page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 200 -%}
 {%- assign post_img = page.cover | default: '/assets/img/logo.png' -%}
