@@ -1,10 +1,27 @@
 title: Toby's Blog
-description: 探索技术、AI与未来的个人博客
+tagline: 探索技术、AI 与未来
+description: Toby 的个人博客：AI 观点、金融科技日报与大模型实践笔记，关注算力、资本与产业的交叉地带。
 url: "https://toby-blog.com"
 baseurl: ""
 lang: zh-CN
-author: Toby
 timezone: Asia/Shanghai
+
+# 作者与社交信息（供 jekyll-seo-tag / JSON-LD 使用）
+author:
+  name: Toby
+  url: "https://toby-blog.com/"
+social:
+  name: Toby
+  links:
+    - "https://github.com/20012002er"
+twitter:
+  card: summary_large_image
+
+# 结构化数据默认类型
+seo:
+  type: WebSite
+  links:
+    - "https://github.com/20012002er"
 
 theme: null
 
@@ -30,3 +47,35 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
+
+# 分类 / 标签归档页（修复站内 /category/xxx/ 404，利于抓取）
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  permalinks:
+    category: /category/:name/
+    tag: /tag/:name/
+
+feed:
+  posts_limit: 20
+
+# 不参与构建的噪音文件（避免 _site 里混入无关二进制/脚本被误抓）
+# 注意：不要排除 *.txt，robots.txt 也是 txt
+exclude:
+  - "*.py"
+  - "*.sh"
+  - "*.log"
+  - "*.pptx"
+  - "*.pdf"
+  - "*.mp3"
+  - "*.docx"
+  - "*.xlsx"
+  - logs/
+  - state/
+  - temp/
+  - tmp/
+  - cron_tmp/

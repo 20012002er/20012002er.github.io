@@ -9,7 +9,7 @@ layout: default
       {% if page.categories.size > 0 %}
       <span class="post-categories">
         {% for cat in page.categories %}
-        <a href="{{ cat | prepend: '/category/' | append: '/' }}" class="category-tag">{{ cat }}</a>
+        <a href="{{ cat | prepend: '/category/' | append: '/' | relative_url }}" class="category-tag">{{ cat }}</a>
         {% endfor %}
       </span>
       {% endif %}
@@ -18,14 +18,14 @@ layout: default
     {% if page.tags.size > 0 %}
     <div class="post-tags">
       {% for tag in page.tags %}
-      <span class="tag">#{{ tag }}</span>
+      <a href="{{ tag | prepend: '/tag/' | append: '/' | relative_url }}" class="tag">#{{ tag }}</a>
       {% endfor %}
     </div>
     {% endif %}
   </header>
   {% if page.cover %}
   <div class="post-cover">
-    <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}" loading="lazy">
+    <img src="{{ page.cover | relative_url }}" alt="{{ page.title | escape }}" loading="eager" fetchpriority="high" decoding="async">
   </div>
   {% endif %}
   <div class="post-body">
@@ -36,3 +36,46 @@ layout: default
     <span class="share-label">{{ page.date | date: "%Y" }} · Toby's Blog</span>
   </footer>
 </article>
+
+{%- assign post_desc = page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 200 -%}
+{%- assign post_img = page.cover | default: '/assets/img/logo.png' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
+  "headline": {{ page.title | jsonify }},
+  "description": {{ post_desc | jsonify }},
+  "image": [ "{{ post_img | absolute_url }}" ],
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "Toby",
+    "url": "{{ site.url }}/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.title | jsonify }},
+    "logo": { "@type": "ImageObject", "url": "{{ '/assets/img/logo.png' | absolute_url }}" }
+  },
+  "inLanguage": "zh-CN",
+  "articleSection": {{ page.categories | first | default: '文章' | jsonify }},
+  "keywords": {{ page.tags | join: ', ' | jsonify }}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "首页", "item": "{{ site.url }}/" },
+    {% if page.categories.size > 0 %}
+    { "@type": "ListItem", "position": 2, "name": {{ page.categories | first | jsonify }}, "item": "{{ page.categories | first | prepend: '/category/' | append: '/' | absolute_url }}" },
+    { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }
+    {% else %}
+    { "@type": "ListItem", "position": 2, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }
+    {% endif %}
+  ]
+}
+</script>

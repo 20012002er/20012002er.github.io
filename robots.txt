@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /page/
+Disallow: /assets/tmp/
+Disallow: /*?*
+
+# 站点地图（由 jekyll-sitemap 生成）
+Sitemap: https://toby-blog.com/sitemap.xml
