@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /page/
+
+# 只屏蔽纯资源/临时目录；分页页保持可抓取（避免「已收录但被 robots 屏蔽」）
 Disallow: /assets/tmp/
-Disallow: /*?*
 
 # 站点地图（由 jekyll-sitemap 生成）
 Sitemap: https://toby-blog.com/sitemap.xml
