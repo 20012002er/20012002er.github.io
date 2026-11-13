@@ -42,6 +42,8 @@ defaults:
     values:
       layout: "post"
       comments: true
+      # 关闭 seo-tag 自带的 JSON-LD，改用 post.html 里的 BlogPosting + BreadcrumbList
+      json_ld: false
 
 plugins:
   - jekyll-paginate

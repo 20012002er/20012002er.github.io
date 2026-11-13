@@ -87,5 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
     block.style.position = 'relative';
     block.appendChild(btn);
   });
+
+  // SEO/性能：正文图片懒加载 + 异步解码（封面首图保持 eager 以保 LCP）
+  document.querySelectorAll('.post-body img').forEach(function(img) {
+    if (!img.hasAttribute('loading')) img.loading = 'lazy';
+    img.decoding = 'async';
+  });
 });
 </script>
