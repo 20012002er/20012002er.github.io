@@ -113,6 +113,10 @@ description: '请愿签名破11.5万要求黄仁勋回归的同一天，WSJ 把�
    36氪 11-14 11:56：监管层表态在"科学把握节奏"的同时，研究让发行上市制度更适配科技企业特征。
    https://36kr.com/newsflashes/4069074198303622?f=rss
 
+7. **币安称下周全面恢复提现**
+   36氪 11-14 16:52：交易所侧流动性事件的收尾节点，提现功能是用户信心的第一指标。
+   https://36kr.com/newsflashes/4069155924530308?f=rss
+
 ![显卡与主板电路：GPU 的价格与产能，是这一轮讨论的底层账本](/assets/img/posts/2026-11-15-ai-news-daily-photo1.jpg)
 
 ## 市场数据
@@ -164,10 +168,6 @@ description: '请愿签名破11.5万要求黄仁勋回归的同一天，WSJ 把�
 3. **EFF：科技公司又在试图改写"隐私"的定义**
    EFF 11-14 文章批评行业新一轮话术，把"隐私"从"不被收集"迁移为"被收集后如何被使用"。
    https://www.eff.org/deeplinks/2026/11/tech-companies-are-trying-shift-entire-concept-privacy-again
-
-4. **币安称下周全面恢复提现**
-   36氪 11-14 16:52：交易所侧流动性事件的收尾节点，提现功能是用户信心的第一指标。
-   https://36kr.com/newsflashes/4069155924530308?f=rss
 
 ---
 
