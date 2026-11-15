@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '三成AI应用在裸奔：vibe coding的安全账单到了'
-date: 2026-11-15 12:08:00 +0800
+date: 2026-11-15 12:14:00 +0800
 categories: [AI观点]
 tags: [vibe coding, 数据泄露, Supabase, 应用安全, Lovable, 漏洞披露]
 author: toby
