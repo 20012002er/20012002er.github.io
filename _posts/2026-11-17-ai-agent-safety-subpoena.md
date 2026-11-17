@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Agent失控第一案：接盘的不是工程师，是检察官'
-date: 2026-11-17 12:06:00 +0800
+date: 2026-11-17 11:30:00 +0800
 categories: [AI观点]
 tags: [Agent安全, 监管诉讼, 形式化验证, AI治理, 运行时防护]
 author: toby
