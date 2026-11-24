@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '末日论是一门好生意：LeCun和Amodei吵的其实是定价权'
-date: 2026-11-24 12:05:00 +0800
+date: 2026-11-24 09:30:00 +0800
 categories: [AI观点]
 tags: [LeCun, Amodei, 开源模型, AI监管, 风险叙事, 模型量化]
 author: toby
