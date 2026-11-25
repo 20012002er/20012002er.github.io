@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Agent的分水岭：代码世界有验收单，你的生活没有'
-date: 2026-11-25 12:20:30 +0800
+date: 2026-11-25 12:02:00 +0800
 categories: [AI观点]
 tags: [AI智能体, ShellBench, 编码智能体, Agent安全, 可验证性, 消费级AI]
 author: toby
